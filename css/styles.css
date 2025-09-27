@@ -196,12 +196,16 @@ nav a:focus {
 	text-decoration: none;
 }
 
-.emphasis,
-nav a:hover {
-    color: orangered;
+nav h1,
+nav h3 {
+	color: #fff;
 }
 
-nav a.emphasis {
+.emphasis,
+nav a:hover,
+nav a.emphasis,
+nav h1:hover,
+nav h3:hover {
     color: orangered !important;
 }
 
