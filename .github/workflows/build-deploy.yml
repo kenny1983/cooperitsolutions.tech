@@ -52,8 +52,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: "html"
-          path: "html"
+          name: "dist"
+          path: "dist"
 
   deploy:
     environment:
@@ -71,13 +71,13 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
-          name: "html"
-          path: "./html"
+          name: "dist"
+          path: "./dist"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: "html"
+          path: "dist"
 
       - name: Deploy to GitHub Pages
         id: deployment

@@ -62,8 +62,9 @@ done
 
 #endregion
 
-# copying assets to ./dist
+#region Copying assets to dist
 cp -R css dist/css
 cp -R images dist/images
 cp -R js dist/js
 cp -R node_modules dist/node_modules
+#endregion
