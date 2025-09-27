@@ -20,6 +20,8 @@ fi
 # Curl the URL $1 and save it to $2
 function curl_and_save() {
     phpFile=$(printf '%s\n' "$1" | sed 's/[.[\*^$(){}?+|/\\]/\\&/g')
+    echo "PHP file to convert is: $1"
+    echo "Escaped name of PHP file: $phpFile"
 
     echo "curl_and_save https://localhost$1 > $2"
     curl -ks --fail "https://localhost$1" | sed "s/$phpFile/$2/g" > "$2"
