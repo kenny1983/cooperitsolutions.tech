@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Create a symbolic link to the current directory
-# if it doesn't exist
+# Create a symbolic link to the current
+# directory if one doesn't already exist
 if [[ ! -L "/workspace" ]]; then
     echo "Creating symbolic link /workspace to $(pwd)"
     ln -s "$(pwd)" /workspace
@@ -48,7 +48,6 @@ curl_and_save "/" "dist/index.html"
 # **/*.php Any php file dist Building
 find . -name "*.php" ! -path "./system/*" ! -path "./vendor/*" ! -path "./layout/*" | while read -r file; do
     file="${file#./}" #Remove the leading ./
-    baseFile="${file%.*}"
 
     # Replace the .php extension with .html
     htmlFile="dist/${file%.php}.html"
@@ -57,7 +56,7 @@ find . -name "*.php" ! -path "./system/*" ! -path "./vendor/*" ! -path "./layout
     mkdir -p "$(dirname "$htmlFile")"
 
     filename=$(basename "$file" .php)
-    curl_and_save "/$baseFile" "$htmlFile"
+    curl_and_save "/$file" "$htmlFile"
 done
 
 #endregion
