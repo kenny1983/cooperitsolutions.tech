@@ -10,9 +10,9 @@ $sites = [
 	'veridia' => '/sites/veridia.html',
 ];
 
-require __DIR__ . "../templates/head.php";
+require __DIR__ . '/../templates/head.php';
 echo '<body id="home-page">';
-require __DIR__ . "../templates/header.php"; ?>
+require __DIR__ . '/../templates/header.php'; ?>
 
 	<div id="home-carousel" class="carousel slide">
 		<div class="carousel-indicators">

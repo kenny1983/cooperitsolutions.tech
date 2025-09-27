@@ -3,9 +3,9 @@ $currPage = "about";
 $titles = '<h3>OK, so I know what you\'re <span class="emphasis">probably</span> thinking:</h3>
 	<h2>Who <span class="emphasis">the heck</span> is Kent Cooper?</h2>';
 
-require __DIR__ . "../templates/head.php";
+require __DIR__ . '/../templates/head.php';
 echo '<body id="about-page">';
-require __DIR__ . "../templates/header.php"; ?>
+require __DIR__ . '/../templates/header.php'; ?>
 
 	<div class="wave top"></div>
 	<div class="pt-3 row">
@@ -45,6 +45,6 @@ require __DIR__ . "../templates/header.php"; ?>
 			</div>
 		</div>
 	</div>
-	<?php require __DIR__ . "../templates/footer.php"; ?>
+	<?php require __DIR__ . '/../templates/footer.php'; ?>
 </body>
 </html>

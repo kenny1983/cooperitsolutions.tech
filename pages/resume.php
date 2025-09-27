@@ -1,4 +1,4 @@
-<?php require __DIR__ . "../templates/head.php";
+<?php require __DIR__ . '/../templates/head.php';
 
 $pageTitle = "My Résumé";
 $currPage = "resume";
@@ -6,7 +6,7 @@ $titles = '<h2>Check out my <span class="emphasis">impressive</span> résumé</h
 	<h3>I have been doing this stuff for almost <span class="emphasis">' . (getAge() - 14) . ' years!</span></h3>';
 
 echo '<body id="resume-page">';
-require __DIR__ . "../templates/header.php"; ?>
+require __DIR__ . '/../templates/header.php'; ?>
 	<div class="wave top"></div>
 	<div class="row">
 		<div class="col-md-11 content">
@@ -157,6 +157,6 @@ require __DIR__ . "../templates/header.php"; ?>
 			</section>
 		</div>
 	</div>
-	<?php require __DIR__ . "../templates/footer.php"; ?>
+	<?php require __DIR__ . '/../templates/footer.php'; ?>
 </body>
 </html>
