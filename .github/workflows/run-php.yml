@@ -1,4 +1,4 @@
-name: PHP Composer
+name: Build and Deploy PHP Site as Static HTML
 
 on:
   push:
@@ -8,27 +8,46 @@ on:
 
 permissions:
   contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.2'
-      - name: Rujn PHP site
-        run: php pages/home.php
+
+      - name: Generate static HTML from PHP
+        run: |
+          mkdir -p dist
+          for file in $(find pages -name '*.php'); do
+            base=$(basename "$file" .php)
+            out="dist/${base}.html"
+
+            echo "Rendering $file -> $out"
+
+            # Run PHP and rewrite links from .php → .html
+            php "$file" | sed 's/\.php"/.html"/g' > "$out"
+          done
+
+          # Special case: home.php -> index.html
+          if [ -f pages/home.php ]; then
+            php pages/home.php | sed 's/\.php"/.html"/g' > dist/index.html
+          fi
+
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: ./_site # Replace with the directory containing your static files
+          path: dist
 
   deploy:
     needs: build
-    permissions:
-      pages: write
-      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -36,4 +55,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
