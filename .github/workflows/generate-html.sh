@@ -47,7 +47,8 @@ curl_and_save "/" "dist/index.html"
 
 # **/*.php (any PHP file) HTML Building
 find ./pages -name "*.php" ! -path "./system/*" ! -path "./vendor/*" ! -path "./layout/*" | while read -r file; do
-    file="${file#./}" #Remove the leading ./
+    path="${file#./}" # Remove the leading ./
+    file="$(basename "$path")"
 
     # Replace the .php extension with .html
     htmlFile="dist/${file%.php}.html"
@@ -56,7 +57,7 @@ find ./pages -name "*.php" ! -path "./system/*" ! -path "./vendor/*" ! -path "./
     mkdir -p "$(dirname "$htmlFile")"
 
     # Hit the PHP script with cURL and save the resulting HTML
-    curl_and_save "/pages/$file" "$htmlFile"
+    curl_and_save "$path" "$htmlFile"
 done
 
 #endregion
