@@ -45,8 +45,8 @@ trap "rm -rf build.lock" EXIT
 
 curl_and_save "/" "dist/index.html"
 
-# **/*.php Any php file dist Building
-find . -name "*.php" ! -path "./system/*" ! -path "./vendor/*" ! -path "./layout/*" | while read -r file; do
+# **/*.php (any PHP file) HTML Building
+find ./pages -name "*.php" ! -path "./system/*" ! -path "./vendor/*" ! -path "./layout/*" | while read -r file; do
     file="${file#./}" #Remove the leading ./
 
     # Replace the .php extension with .html
@@ -55,8 +55,8 @@ find . -name "*.php" ! -path "./system/*" ! -path "./vendor/*" ! -path "./layout
     # Create the directory structure if it doesn't exist
     mkdir -p "$(dirname "$htmlFile")"
 
-    filename=$(basename "$file" .php)
-    curl_and_save "/$file" "$htmlFile"
+    # Hit the PHP script with cURL and save the resulting HTML
+    curl_and_save "/pages/$file" "$htmlFile"
 done
 
 #endregion
