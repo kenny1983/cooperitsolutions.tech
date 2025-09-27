@@ -1,0 +1,2372 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="pingback" href="https://carona.com.au/xmlrpc.php" />
+
+	<script type="text/javascript">
+		document.documentElement.className = 'js';
+	</script>
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><style id="et-builder-googlefonts-cached-inline">/* Original: https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;subset=latin,latin-ext&#038;display=swap *//* User Agent: Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) Safari/538.1 Daum/4.1 */@font-face {font-family: 'Poppins';font-style: italic;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiAyp8kv8JHgFVrJJLmE0tMMPc.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiDyp8kv8JHgFVrJJLmv1pVGdeL.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiDyp8kv8JHgFVrJJLm21lVGdeL.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiGyp8kv8JHgFVrJJLufntF.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiDyp8kv8JHgFVrJJLmg1hVGdeL.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiDyp8kv8JHgFVrJJLmr19VGdeL.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiDyp8kv8JHgFVrJJLmy15VGdeL.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiDyp8kv8JHgFVrJJLm111VGdeL.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiDyp8kv8JHgFVrJJLm81xVGdeL.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiGyp8kv8JHgFVrLPTufntF.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLFj_Z1JlEA.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLDz8Z1JlEA.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiEyp8kv8JHgFVrJJnedw.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLGT9Z1JlEA.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLEj6Z1JlEA.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLCz7Z1JlEA.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLDD4Z1JlEA.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLBT5Z1JlEA.ttf) format('truetype');}/* User Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0 */@font-face {font-family: 'Poppins';font-style: italic;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiAyp8kv8JHgFVrJJLmE0tMMPQ.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiDyp8kv8JHgFVrJJLmv1pVGdeI.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiDyp8kv8JHgFVrJJLm21lVGdeI.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiGyp8kv8JHgFVrJJLufntG.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiDyp8kv8JHgFVrJJLmg1hVGdeI.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiDyp8kv8JHgFVrJJLmr19VGdeI.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiDyp8kv8JHgFVrJJLmy15VGdeI.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiDyp8kv8JHgFVrJJLm111VGdeI.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiDyp8kv8JHgFVrJJLm81xVGdeI.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiGyp8kv8JHgFVrLPTufntG.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLFj_Z1JlEw.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLDz8Z1JlEw.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiEyp8kv8JHgFVrJJnedA.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLGT9Z1JlEw.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLEj6Z1JlEw.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLCz7Z1JlEw.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLDD4Z1JlEw.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLBT5Z1JlEw.woff) format('woff');}/* User Agent: Mozilla/5.0 (Windows NT 6.3; rv:39.0) Gecko/20100101 Firefox/39.0 */@font-face {font-family: 'Poppins';font-style: italic;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiAyp8kv8JHgFVrJJLmE0tMMPI.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiDyp8kv8JHgFVrJJLmv1pVGdeO.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiDyp8kv8JHgFVrJJLm21lVGdeO.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiGyp8kv8JHgFVrJJLufntA.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiDyp8kv8JHgFVrJJLmg1hVGdeO.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiDyp8kv8JHgFVrJJLmr19VGdeO.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiDyp8kv8JHgFVrJJLmy15VGdeO.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiDyp8kv8JHgFVrJJLm111VGdeO.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiDyp8kv8JHgFVrJJLm81xVGdeO.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiGyp8kv8JHgFVrLPTufntA.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLFj_Z1JlFQ.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLDz8Z1JlFQ.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiEyp8kv8JHgFVrJJnecg.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLGT9Z1JlFQ.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLEj6Z1JlFQ.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLCz7Z1JlFQ.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLDD4Z1JlFQ.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLBT5Z1JlFQ.woff2) format('woff2');}</style><meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer>
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+	const gtm4wp_use_sku_instead = false;
+	const gtm4wp_currency = 'AUD';
+	const gtm4wp_product_per_impression = 10;
+	const gtm4wp_clear_ecommerce = false;
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO plugin v24.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Custom Design Barrier &amp; Door Systems | Carona Group Australia</title>
+	<meta name="description" content="Carona Group is a leading supplier of custom-made solutions. We offer high-quality barrier &amp; door systems for energy &amp; hygiene control. Request a quote!" />
+	<link rel="canonical" href="https://carona.com.au/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Custom Design Barrier &amp; Door Systems | Carona Group Australia" />
+	<meta property="og:description" content="Carona Group is a leading supplier of custom-made solutions. We offer high-quality barrier &amp; door systems for energy &amp; hygiene control. Request a quote!" />
+	<meta property="og:url" content="https://carona.com.au/" />
+	<meta property="og:site_name" content="Carona" />
+	<meta property="article:modified_time" content="2023-10-26T02:18:44+00:00" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://carona.com.au/","url":"https://carona.com.au/","name":"Custom Design Barrier & Door Systems | Carona Group Australia","isPartOf":{"@id":"https://carona.com.au/#website"},"datePublished":"2022-02-02T08:03:23+00:00","dateModified":"2023-10-26T02:18:44+00:00","description":"Carona Group is a leading supplier of custom-made solutions. We offer high-quality barrier & door systems for energy & hygiene control. Request a quote!","breadcrumb":{"@id":"https://carona.com.au/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://carona.com.au/"]}]},{"@type":"BreadcrumbList","@id":"https://carona.com.au/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https://carona.com.au/#website","url":"https://carona.com.au/","name":"Carona","description":"Door &amp; Barrier Systems for Energy &amp; Hygiene Control","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://carona.com.au/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel="alternate" type="application/rss+xml" title="Carona &raquo; Feed" href="https://carona.com.au/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Carona &raquo; Comments Feed" href="https://carona.com.au/comments/feed/" />
+<meta content="Divi Child (Carona) v.4.14.4.1640576456" name="generator"/><link rel='stylesheet' id='wp-block-library-css' href='https://carona.com.au/wp-includes/css/dist/block-library/style.min.css?ver=6.7.2' type='text/css' media='all' />
+<style id='wp-block-library-theme-inline-css' type='text/css'>
+.wp-block-audio :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio :where(figcaption){color:#ffffffa6}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed :where(figcaption){color:#ffffffa6}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:#ffffffa6}:root :where(.wp-block-image figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme :root :where(.wp-block-image figcaption){color:#ffffffa6}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote:where(.has-text-align-right){border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote:where(.has-text-align-center){border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote:where(.is-style-plain){border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table :where(figcaption){color:#ffffffa6}.wp-block-video :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video :where(figcaption){color:#ffffffa6}.wp-block-video{margin:0 0 1em}:root :where(.wp-block-template-part.has-background){margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+</style>
+<link rel='stylesheet' id='ion.range-slider-css' href='https://carona.com.au/wp-content/plugins/yith-woocommerce-ajax-product-filter-premium/assets/css/ion.range-slider.css?ver=2.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='yith-wcan-shortcodes-css' href='https://carona.com.au/wp-content/plugins/yith-woocommerce-ajax-product-filter-premium/assets/css/shortcodes.css?ver=4.7.0' type='text/css' media='all' />
+<style id='yith-wcan-shortcodes-inline-css' type='text/css'>
+:root{
+	--yith-wcan-filters_colors_titles: #333333;
+	--yith-wcan-filters_colors_background: #FFFFFF;
+	--yith-wcan-filters_colors_accent: rgb(14,129,184);
+	--yith-wcan-filters_colors_accent_r: 14;
+	--yith-wcan-filters_colors_accent_g: 129;
+	--yith-wcan-filters_colors_accent_b: 184;
+	--yith-wcan-color_swatches_border_radius: 100%;
+	--yith-wcan-color_swatches_size: 30px;
+	--yith-wcan-labels_style_background: #FFFFFF;
+	--yith-wcan-labels_style_background_hover: rgb(14,129,184);
+	--yith-wcan-labels_style_background_active: rgb(14,129,184);
+	--yith-wcan-labels_style_text: #434343;
+	--yith-wcan-labels_style_text_hover: #FFFFFF;
+	--yith-wcan-labels_style_text_active: #FFFFFF;
+	--yith-wcan-anchors_style_text: #434343;
+	--yith-wcan-anchors_style_text_hover: rgb(14,129,184);
+	--yith-wcan-anchors_style_text_active: rgb(14,129,184);
+}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-family--inter: "Inter", sans-serif;--wp--preset--font-family--cardo: Cardo;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:root { --wp--style--global--content-size: 823px;--wp--style--global--wide-size: 1080px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-inter-font-family{font-family: var(--wp--preset--font-family--inter) !important;}.has-cardo-font-family{font-family: var(--wp--preset--font-family--cardo) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='nb_bootstap_custom-css' href='https://carona.com.au/wp-content/plugins/wc-variations-layouts//front/assets/css/nb-bootstrap.min.css?ver=6.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wc_variations_layoutswc_variation_layout-css' href='https://carona.com.au/wp-content/plugins/wc-variations-layouts//front/assets/css/wc_variation_layout.css?v=1.7&#038;ver=6.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-layout-css' href='https://carona.com.au/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=9.6.0' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-smallscreen-css' href='https://carona.com.au/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=9.6.0' type='text/css' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='woocommerce-general-css' href='https://carona.com.au/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=9.6.0' type='text/css' media='all' />
+<style id='woocommerce-inline-inline-css' type='text/css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel='stylesheet' id='megamenu-css' href='https://carona.com.au/wp-content/uploads/maxmegamenu/style.css?ver=aea926' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css' href='https://carona.com.au/wp-includes/css/dashicons.min.css?ver=6.7.2' type='text/css' media='all' />
+<style id='dashicons-inline-css' type='text/css'>
+[data-font="Dashicons"]:before {font-family: 'Dashicons' !important;content: attr(data-icon) !important;speak: none !important;font-weight: normal !important;font-variant: normal !important;text-transform: none !important;line-height: 1 !important;font-style: normal !important;-webkit-font-smoothing: antialiased !important;-moz-osx-font-smoothing: grayscale !important;}
+</style>
+<link rel='stylesheet' id='brands-styles-css' href='https://carona.com.au/wp-content/plugins/woocommerce/assets/css/brands.css?ver=9.6.0' type='text/css' media='all' />
+<link rel='stylesheet' id='revslider-divi-styles-css' href='https://carona.com.au/wp-content/plugins/revslider/admin/includes/shortcode_generator/divi/styles/style.min.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='supreme-modules-pro-for-divi-styles-css' href='https://carona.com.au/wp-content/plugins/supreme-modules-pro-for-divi/styles/style.min.css?ver=4.9.97.26' type='text/css' media='all' />
+<link rel='stylesheet' id='yith_ywraq_frontend-css' href='https://carona.com.au/wp-content/plugins/yith-woocommerce-request-a-quote-premium/assets/css/ywraq-frontend.css?ver=4.30.0' type='text/css' media='all' />
+<style id='yith_ywraq_frontend-inline-css' type='text/css'>
+:root {
+		--ywraq_layout_button_bg_color: rgba(0,102,180,0);
+		--ywraq_layout_button_bg_color_hover: rgb(27,174,124);
+		--ywraq_layout_button_border_color: rgba(0,102,180,0);
+		--ywraq_layout_button_border_color_hover: rgb(27,174,124);
+		--ywraq_layout_button_color: rgb(27,174,124);
+		--ywraq_layout_button_color_hover: #fff;
+		
+		--ywraq_checkout_button_bg_color: #0066b4;
+		--ywraq_checkout_button_bg_color_hover: #044a80;
+		--ywraq_checkout_button_border_color: #0066b4;
+		--ywraq_checkout_button_border_color_hover: #044a80;
+		--ywraq_checkout_button_color: #ffffff;
+		--ywraq_checkout_button_color_hover: #ffffff;
+		
+		--ywraq_accept_button_bg_color: #0066b4;
+		--ywraq_accept_button_bg_color_hover: #044a80;
+		--ywraq_accept_button_border_color: #0066b4;
+		--ywraq_accept_button_border_color_hover: #044a80;
+		--ywraq_accept_button_color: #ffffff;
+		--ywraq_accept_button_color_hover: #ffffff;
+		
+		--ywraq_reject_button_bg_color: transparent;
+		--ywraq_reject_button_bg_color_hover: #CC2B2B;
+		--ywraq_reject_button_border_color: #CC2B2B;
+		--ywraq_reject_button_border_color_hover: #CC2B2B;
+		--ywraq_reject_button_color: #CC2B2B;
+		--ywraq_reject_button_color_hover: #ffffff;
+		}		
+
+</style>
+<link rel='stylesheet' id='dsm-magnific-popup-css' href='https://carona.com.au/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/css/magnific_popup.css?ver=4.9.97.26' type='text/css' media='all' />
+<link rel='stylesheet' id='dsm-swiper-css' href='https://carona.com.au/wp-content/plugins/supreme-modules-pro-for-divi/public/css/swiper.css?ver=4.9.97.26' type='text/css' media='all' />
+<link rel='stylesheet' id='dsm-popup-css' href='https://carona.com.au/wp-content/plugins/supreme-modules-pro-for-divi/public/css/popup.css?ver=4.9.97.26' type='text/css' media='all' />
+<link rel='stylesheet' id='dsm-animate-css' href='https://carona.com.au/wp-content/plugins/supreme-modules-pro-for-divi/public/css/animate.css?ver=4.9.97.26' type='text/css' media='all' />
+<link rel='stylesheet' id='dsm-readmore-css' href='https://carona.com.au/wp-content/plugins/supreme-modules-pro-for-divi/public/css/readmore.css?ver=4.9.97.26' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-style-parent-css' href='https://carona.com.au/wp-content/themes/Divi/style-static.min.css?ver=4.27.4' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-style-css' href='https://carona.com.au/wp-content/themes/Divi-child/style.css?ver=4.27.4' type='text/css' media='all' />
+<script type="text/javascript" src="https://carona.com.au/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://carona.com.au/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://carona.com.au/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.9.6.0" id="jquery-blockui-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="https://carona.com.au/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.9.6.0" id="js-cookie-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="woocommerce-js-extra">
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://carona.com.au/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=9.6.0" id="woocommerce-js" defer="defer" data-wp-strategy="defer"></script>
+<link rel="https://api.w.org/" href="https://carona.com.au/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://carona.com.au/wp-json/wp/v2/pages/7368" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://carona.com.au/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.7.2" />
+<meta name="generator" content="WooCommerce 9.6.0" />
+<link rel='shortlink' href='https://carona.com.au/' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://carona.com.au/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcarona.com.au%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://carona.com.au/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcarona.com.au%2F&#038;format=xml" />
+<script type="text/javascript">
+ jQuery(window).load(function () {
+	console.log("Hello");
+jQuery("a.dsm-readmore-btn").text("LEARN MORE"); 
+jQuery("div#news .more-link").text("LEARN MORE");
+jQuery("div#news .more-link").text("LEARN MORE");	
+jQuery("div#projects .more-link").text("VIEW PROJECT"); 
+jQuery(" div#projects .pagination .alignleft a").text("VIEW MORE"); 
+jQuery("div#news .pagination .alignleft a").text("SHOW MORE");
+jQuery("<p> Products</p>").insertAfter("div#custom-text-products h1.entry-title");
+	 jQuery(".pagination a").click(function(){
+
+	jQuery(document).ajaxStop(function(){
+jQuery("div#news .more-link").text("LEARN MORE");
+jQuery("div#news .more-link").text("LEARN MORE");	
+jQuery("div#projects .more-link").text("VIEW PROJECT"); 
+jQuery(" div#projects .pagination .alignleft a").text("VIEW MORE"); 
+jQuery("div#news .pagination .alignleft a").text("SHOW MORE");
+});
+});
+});	
+	
+//testimonial image text position shuffle
+	jQuery( document ).ready(function() {
+    console.log( "ready!" );
+		 jQuery('.et_pb_slide_title').each(function() {
+      jQuery(this).insertAfter(jQuery(this).parent().find('.et_pb_slide_content'));
+  });
+});
+
+
+
+</script>
+<script>
+jQuery(document).ready(function($) {
+jQuery('div#gallerycarasoul .dsm_card_carousel_child ').filter(function() {
+
+  return jQuery.trim(jQuery(this).text()) === ''
+
+}).remove();
+});
+
+</script>
+<!--mobile toogle menus  -->
+<script>
+jQuery(document).ready(function($){
+    function ds_setup_collapsible_submenus() {
+        var $menu = $('.et_mobile_menu'),
+        top_level_link = '.et_mobile_menu .menu-item-has-children > a';
+        
+        $menu.find('a').each(function() {
+            $(this).off('click');
+            if ( $(this).is(top_level_link) ) {
+                $(this).attr('href', '#');
+            }
+
+            if ( ! $(this).siblings('.sub-menu').length ) {
+                $(this).on('click', function(event) {
+                    $(this).parents('.mobile_nav').trigger('click');
+                });
+            } 
+            else {
+                $(this).on('click', function(event) {
+                    event.preventDefault();
+                    $(this).parent().toggleClass('visible');
+                });
+            }
+        });
+    }
+    setTimeout(function() {
+        ds_setup_collapsible_submenus();
+    }, 700);
+ });
+</script>
+<!--mobile toogle menus  -->
+
+
+
+<script src="https://caronagroup.bamboohr.com/js/embed.js" type="text/javascript" async="" defer="defer"></script>
+<!-- Stream WordPress user activity plugin v4.0.2 -->
+			<style>  .wcvw_main_container{ color: #222 }  .wcvw_main_container .wcvw_variation_title h2{ color: #000 }  .wcvw_main_container .wcvw_row_of_items{ background-color: #fff }  .wcvw_main_container .wcvw_row_of_items:hover{ background-color: #f5fffa }  .wcvw_main_container .product_is_in_stock{ background-color: #08aa46; color:#fff }  .wcvw_main_container .product_is_out_stock{ background-color: #aa0816; color:#fff }  .wc_variations_layouts_table tbody tr:nth-child(2n){ background-color:#f9f9f9; }  .wc_variations_layouts_table thead,.wc_variations_layouts_table tfoot{ background-color:#f6f6f6; color:#000; }  .wcvw_main_container .wc_variations_layouts_boxed{ color: #fff }  .wcvw_varition_add_to_cart.button,.wcvw_varition_all_add_to_cart.button{	background: #444 !important;	color: #fff !important; } .wcvw_main_container .wcvw_price .price{	color: #08aa46 !important; } .wcvw_main_container,.wcvw_main_container .wcvw_price .price,.wcvw_main_container #add_to_cart_btn_action a,.wcvw_varition_all_add_to_cart{	font-size: 13px !important; } </style> 
+		
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- GTM Container placement set to automatic -->
+<script data-cfasync="false" data-pagespeed-no-defer>
+	var dataLayer_content = {"pagePostType":"frontpage","pagePostType2":"single-page","pagePostAuthor":"admin_carona"};
+	dataLayer.push( dataLayer_content );
+</script>
+<script data-cfasync="false">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T23GF22');
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<meta name="generator" content="Powered by Slider Revolution 6.5.12 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<meta name="ahrefs-site-verification" content="d0ca6a29906b1a72c8067c03364f7d93e773f2478212dbd3880062f0cdb43fa4">
+
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+   function onSubmit(token) {
+     document.getElementById("gform_submit_button_1").submit();
+   }
+ </script>
+
+<style class='wp-fonts-local' type='text/css'>
+@font-face{font-family:Inter;font-style:normal;font-weight:300 900;font-display:fallback;src:url('https://carona.com.au/wp-content/plugins/woocommerce/assets/fonts/Inter-VariableFont_slnt,wght.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:Cardo;font-style:normal;font-weight:400;font-display:fallback;src:url('https://carona.com.au/wp-content/plugins/woocommerce/assets/fonts/cardo_normal_400.woff2') format('woff2');}
+</style>
+<link rel="icon" href="https://carona.com.au/wp-content/uploads/2022/06/favicon-carona32x32.png" sizes="32x32" />
+<link rel="icon" href="https://carona.com.au/wp-content/uploads/2022/06/favicon-carona32x32.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://carona.com.au/wp-content/uploads/2022/06/favicon-carona32x32.png" />
+<meta name="msapplication-TileImage" content="https://carona.com.au/wp-content/uploads/2022/06/favicon-carona32x32.png" />
+<script>function setREVStartSize(e){
+			//window.requestAnimationFrame(function() {
+				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;
+				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;
+				try {
+					var pw = document.getElementById(e.c).parentNode.offsetWidth,
+						newh;
+					pw = pw===0 || isNaN(pw) ? window.RSIW : pw;
+					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
+					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
+					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
+					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
+					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
+					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
+					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);
+					if(e.layout==="fullscreen" || e.l==="fullscreen")
+						newh = Math.max(e.mh,window.RSIH);
+					else{
+						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];
+						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
+						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
+											
+						var nl = new Array(e.rl.length),
+							ix = 0,
+							sl;
+						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
+						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
+						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
+						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;
+						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
+						sl = nl[0];
+						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}
+						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);
+						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
+					}
+					var el = document.getElementById(e.c);
+					if (el!==null && el) el.style.height = newh+"px";
+					el = document.getElementById(e.c+"_wrapper");
+					if (el!==null && el) {
+						el.style.height = newh+"px";
+						el.style.display = "block";
+					}
+				} catch(e){
+					console.log("Failure at Presize of Slider:" + e)
+				}
+			//});
+		  };</script>
+<link rel="stylesheet" id="et-core-unified-tb-7411-tb-7412-7368-cached-inline-styles" href="https://carona.com.au/wp-content/et-cache/7368/et-core-unified-tb-7411-tb-7412-7368.min.css?ver=1738748669" /><link rel="stylesheet" id="et-core-unified-7368-cached-inline-styles" href="https://carona.com.au/wp-content/et-cache/7368/et-core-unified-7368.min.css?ver=1738748668" /><style type="text/css">/** Mega Menu CSS: fs **/</style>
+</head>
+<body class="home page-template-default page page-id-7368 theme-Divi et-tb-has-template et-tb-has-header et-tb-has-footer woocommerce-no-js mega-menu-primary-menu yith-wcan-pro et_pb_button_helper_class et_cover_background et_pb_gutter windows et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db">
+	
+<!-- GTM Container placement set to automatic -->
+<!-- Google Tag Manager (noscript) --><div id="page-container">
+<div id="et-boc" class="et-boc">
+			
+		<header class="et-l et-l--header">
+			<div class="et_builder_inner_content et_pb_gutters3">
+		<div class="et_pb_section et_pb_section_0_tb_header et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_0_tb_header">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_0_tb_header  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_0_tb_header  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p style="text-align: right;"><span style="color: #ffffff;"><a href="/merger-announcement" style="color: #ffffff;">CARONA GROUP &amp; REMAX DOORS HAVE MERGED. CLICK HERE FOR MORE INFO.</a></span> <span style="color: #ffffff;"></span></p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_with_border et_pb_section et_pb_section_1_tb_header header et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_1_tb_header header-top et_pb_equal_columns et_pb_gutters1">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_1_tb_header header-top-column-left  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_1_tb_header  et_pb_text_align_right et_pb_text_align_center-tablet et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p style="text-align: left;">Success built on trust, certified quality and unmatched service.</p></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_2 et_pb_column_2_tb_header header-top-column-right  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_blurb et_pb_blurb_0_tb_header  et_pb_text_align_left  et_pb_blurb_position_left et_pb_bg_layout_light" data-background-layout="light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					
+					<div class="et_pb_blurb_container">
+						
+						<div class="et_pb_blurb_description" data-et-multi-view="{&quot;schema&quot;:{&quot;content&quot;:{&quot;desktop&quot;:&quot;&lt;p style=\&quot;text-align: right;\&quot;&gt;&lt;span class=\&quot;et-waypoint et_pb_animation_off et_pb_animation_off_tablet et_pb_animation_off_phone et-pb-icon et-animated header-tel-logo\&quot;&gt;\ue090&lt;\/span&gt; &lt;span class=\&quot;number-blue\&quot;&gt;\u00a0\u00a0&lt;a href=\&quot;tel:(02) 4702 6655\&quot;&gt;(02) 4702 6655&lt;\/a&gt;&lt;\/span&gt;&lt;\/p&gt;&quot;,&quot;tablet&quot;:&quot;&lt;p&gt;&lt;span class=\&quot;et-waypoint et_pb_animation_off et_pb_animation_off_tablet et_pb_animation_off_phone et-pb-icon et-animated header-tel-logo\&quot;&gt;\ue090&lt;\/span&gt;  (02) 4702 6655&lt;\/p&gt;&quot;,&quot;phone&quot;:&quot;&lt;p style=\&quot;text-align: center;\&quot;&gt;&lt;span class=\&quot;et-waypoint et_pb_animation_off et_pb_animation_off_tablet et_pb_animation_off_phone et-pb-icon et-animated header-tel-logo\&quot;&gt;\ue090&lt;\/span&gt;  (02) 4702 6655&lt;\/p&gt;&quot;}},&quot;slug&quot;:&quot;et_pb_blurb&quot;}" data-et-multi-view-load-tablet-hidden="true" data-et-multi-view-load-phone-hidden="true"><p style="text-align: right;"><span class="et-waypoint et_pb_animation_off et_pb_animation_off_tablet et_pb_animation_off_phone et-pb-icon et-animated header-tel-logo"></span> <span class="number-blue">  <a href="tel:(02) 4702 6655">(02) 4702 6655</a></span></p></div>
+					</div>
+				</div>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_0_tb_header_wrapper et_pb_button_alignment_center et_pb_button_alignment_tablet_right et_pb_button_alignment_phone_center et_pb_module ">
+				<a class="et_pb_button et_pb_button_0_tb_header et_pb_bg_layout_light" href="https://carona.com.au/contact/">CONTACT US</a>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_with_border et_pb_section et_pb_section_2_tb_header header et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_2_tb_header header-main et_pb_equal_columns et_pb_gutters1">
+				<div class="et_pb_column et_pb_column_1_4 et_pb_column_3_tb_header header-main-column-left  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_0_tb_header">
+				
+				
+				
+				
+				<a href="https://carona.com.au/"><span class="et_pb_image_wrap "><img fetchpriority="high" decoding="async" width="2835" height="1064" src="https://carona.com.au/wp-content/uploads/2022/03/Carona-Group-Logo.png" alt="" title="Carona-Group-Logo" srcset="https://carona.com.au/wp-content/uploads/2022/03/Carona-Group-Logo.png 2835w, https://carona.com.au/wp-content/uploads/2022/03/Carona-Group-Logo-1280x480.png 1280w, https://carona.com.au/wp-content/uploads/2022/03/Carona-Group-Logo-980x368.png 980w, https://carona.com.au/wp-content/uploads/2022/03/Carona-Group-Logo-480x180.png 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) and (max-width: 1280px) 1280px, (min-width: 1281px) 2835px, 100vw" class="wp-image-10368" /></span></a>
+			</div>
+			</div><div class="et_pb_column et_pb_column_3_4 et_pb_column_4_tb_header header-main-column-right  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_code et_pb_code_0_tb_header header-menu">
+				
+				
+				
+				
+				<div class="et_pb_code_inner"><div id="mega-menu-wrap-primary-menu" class="mega-menu-wrap"><div class="mega-menu-toggle"><div class="mega-toggle-blocks-left"><div class='mega-toggle-block mega-menu-toggle-block mega-toggle-block-1' id='mega-toggle-block-1' tabindex='0'><span class='mega-toggle-label' role='button' aria-expanded='false'><span class='mega-toggle-label-closed'>MENU</span><span class='mega-toggle-label-open'>MENU</span></span></div></div><div class="mega-toggle-blocks-center"></div><div class="mega-toggle-blocks-right"></div></div><ul id="mega-menu-primary-menu" class="mega-menu max-mega-menu mega-menu-horizontal mega-no-js" data-event="hover" data-effect="fade_up" data-effect-speed="200" data-effect-mobile="disabled" data-effect-speed-mobile="0" data-panel-width="body" data-panel-inner-width="1500px" data-mobile-force-width="false" data-second-click="go" data-document-click="collapse" data-vertical-behaviour="standard" data-breakpoint="768" data-unbind="true" data-mobile-state="expand_all" data-mobile-direction="vertical" data-hover-intent-timeout="300" data-hover-intent-interval="100"><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-align-bottom-left mega-menu-flyout mega-menu-item-2180' id='mega-menu-item-2180'><a class="mega-menu-link" href="https://carona.com.au/about" aria-expanded="false" tabindex="0">ABOUT US<span class="mega-indicator"></span></a>
+<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-9553' id='mega-menu-item-9553'><a class="mega-menu-link" href="/about/">About Us</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-9599' id='mega-menu-item-9599'><a class="mega-menu-link" href="/meet-the-team/">Our People</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-9557' id='mega-menu-item-9557'><a class="mega-menu-link" href="/careers/">Careers</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-9600' id='mega-menu-item-9600'><a class="mega-menu-link" href="/news/">News</a></li></ul>
+</li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-megamenu mega-align-bottom-left mega-menu-grid mega-menu-item-7426' id='mega-menu-item-7426'><a class="mega-menu-link" href="#" aria-expanded="false" tabindex="0">PRODUCTS<span class="mega-indicator"></span></a>
+<ul class="mega-sub-menu">
+<li class='mega-menu-row' id='mega-menu-7426-0'>
+	<ul class="mega-sub-menu">
+<li class='mega-menu-column mega-menu-columns-2-of-12' id='mega-menu-7426-0-0'>
+		<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-item-7427' id='mega-menu-item-7427'><a class="mega-menu-link" href="#">By Industry<span class="mega-indicator"></span></a>
+			<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-7430' id='mega-menu-item-7430'><a class="mega-menu-link" href="/product-range/mining-construction/">Mining & Construction</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-7431' id='mega-menu-item-7431'><a class="mega-menu-link" href="/product-range/logistics-warehouse/">Logistics & Warehouse</a></li>			</ul>
+</li>		</ul>
+</li><li class='mega-menu-column mega-middle-menus mega-menu-columns-8-of-12 middle-menus' id='mega-menu-7426-0-1'>
+		<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-4-columns mega-menu-item-7435' id='mega-menu-item-7435'><a class="mega-menu-link" href="#">By Product<span class="mega-indicator"></span></a>
+			<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-item-7436' id='mega-menu-item-7436'><a class="mega-menu-link" href="/product-range/traffic-doors/" aria-expanded="false">TRAFFIC DOORS<span class="mega-indicator"></span></a>
+				<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-7437' id='mega-menu-item-7437'><a class="mega-menu-link" href="/product/thermal-traffic-doors/">Thermal Traffic Door</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-7438' id='mega-menu-item-7438'><a class="mega-menu-link" href="/product/pvc-swing-doors/">PVC Swing Doors</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-7440' id='mega-menu-item-7440'><a class="mega-menu-link" href="/product/personnel-access-doors/">Personnel Access Doors</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-7441' id='mega-menu-item-7441'><a class="mega-menu-link" href="/product/sliding-pedestrian-access-doors/">Sliding Pedestrian Access Doors</a></li>				</ul>
+</li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-has-children mega-menu-item-14173' id='mega-menu-item-14173'><a class="mega-menu-link" href="https://carona.com.au/high-speed-rapid-roll-doors/" aria-expanded="false">HIGH SPEED RAPID ROLL DOORS<span class="mega-indicator"></span></a>
+				<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-9067' id='mega-menu-item-9067'><a class="mega-menu-link" href="/product/movidor-ambient-temperature-rapid-door/">Movidor Ambient Temperature Rapid Door</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-9068' id='mega-menu-item-9068'><a class="mega-menu-link" href="/product/movitherm-coolroom-rapid-door/">Movitherm Coolroom Rapid Door</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-9069' id='mega-menu-item-9069'><a class="mega-menu-link" href="/product/movichill-freezer-rapid-door/">Movichill Freezer Rapid Door</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-9368' id='mega-menu-item-9368'><a class="mega-menu-link" href="https://carona.com.au/product/movishutter-sectional-rapid-door/">Movishutter High Speed Roller Shutter Door</a></li>				</ul>
+</li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-item-7481' id='mega-menu-item-7481'><a class="mega-menu-link" href="/product-range/pvc/" aria-expanded="false">PVC STRIP PRODUCTS<span class="mega-indicator"></span></a>
+				<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-7482' id='mega-menu-item-7482'><a class="mega-menu-link" href="/product/pvc-strip-curtains/">PVC Strip Door Curtains</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-7483' id='mega-menu-item-7483'><a class="mega-menu-link" href="/product/premium-flexible-pvc/">Flexible PVC Rolls</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-7484' id='mega-menu-item-7484'><a class="mega-menu-link" href="/product/compass-system-truck-mounted-sliding-curtains/">Compass Refrigeration Transport</a></li>				</ul>
+</li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-item-13062' id='mega-menu-item-13062'><a class="mega-menu-link" href="/impact-protection-and-door-support/" aria-expanded="false">IMPACT PROTECTION<span class="mega-indicator"></span></a>
+				<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-13063' id='mega-menu-item-13063'><a class="mega-menu-link" href="/bollards/">Bollards</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-13064' id='mega-menu-item-13064'><a class="mega-menu-link" href="/bump-rails/">Bump Rails</a></li>				</ul>
+</li>			</ul>
+</li>		</ul>
+</li><li class='mega-menu-column mega-menu-columns-2-of-12' id='mega-menu-7426-0-2'>
+		<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-item-9072' id='mega-menu-item-9072'><a class="mega-menu-link" href="/product-range/spare-parts/">Spare Parts<span class="mega-indicator"></span></a>
+			<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-9074' id='mega-menu-item-9074'><a class="mega-menu-link" href="/product-range/spare-parts/2400-series-swing-doors/">2400 Series Swing Doors</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-9077' id='mega-menu-item-9077'><a class="mega-menu-link" href="/product-range/spare-parts/3000-series-swing-doors/">3000 Series Swing Doors</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-9073' id='mega-menu-item-9073'><a class="mega-menu-link" href="/product-range/spare-parts/4500-series-swing-doors/">4500 Series Swing Doors</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-9075' id='mega-menu-item-9075'><a class="mega-menu-link" href="/product-range/spare-parts/compass-system/">Compass System</a></li>			</ul>
+</li>		</ul>
+</li>	</ul>
+</li></ul>
+</li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-align-bottom-left mega-menu-flyout mega-menu-item-9078' id='mega-menu-item-9078'><a class="mega-menu-link" href="/recent-project/" tabindex="0">RECENT PROJECTS</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-align-bottom-left mega-menu-flyout mega-menu-item-9079' id='mega-menu-item-9079'><a class="mega-menu-link" href="/servicing/" tabindex="0">SERVICING</a></li></ul></div></div>
+			</div><div class="et_pb_module et_pb_image et_pb_image_1_tb_header header-cart-icon">
+				
+				
+				
+				
+				<a href="https://carona.com.au/request-a-quote/"><span class="et_pb_image_wrap "><img decoding="async" width="27" height="35" src="https://carona.com.au/wp-content/uploads/2023/04/icon-document.svg" alt="" title="icon-document" class="wp-image-14421" /></span></a>
+			</div><div class="et_pb_module et_pb_code et_pb_code_1_tb_header header-cart-count">
+				
+				
+				
+				
+				<div class="et_pb_code_inner"><div class="ywraq_number_items" data-show_url="yes" data-item_name="item" data-item_plural_name="items"><a href="https://carona.com.au/request-a-quote/">0 <span>items</span></a></div> </div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_3_tb_header header-main et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_3_tb_header">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_5_tb_header  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_button_module_wrapper et_pb_button_1_tb_header_wrapper et_pb_button_alignment_center et_pb_module ">
+				<a class="et_pb_button et_pb_button_1_tb_header et_pb_bg_layout_light" href="tel:(02)%204702%206655" data-icon="&#xe090;">(02) 4702 6655</a>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_4_tb_header et_section_regular et_pb_section--with-menu" >
+				
+				
+				
+				
+				
+				
+				<div id="mobile-menu-row" class="et_pb_row et_pb_row_4_tb_header et_pb_row--with-menu">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_6_tb_header  et_pb_css_mix_blend_mode_passthrough et-last-child et_pb_column--with-menu">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_menu et_pb_menu_0_tb_header et_pb_bg_layout_light  et_pb_text_align_left et_dropdown_animation_fade et_pb_menu--with-logo et_pb_menu--style-left_aligned">
+					
+					
+					
+					
+					<div class="et_pb_menu_inner_container clearfix">
+						<div class="et_pb_menu__logo-wrap">
+			  <div class="et_pb_menu__logo">
+				<a href="https://carona.com.au/" ><img decoding="async" width="2835" height="1064" src="https://carona.com.au/wp-content/uploads/2022/06/Carona-Group-Logo-1.png" alt="" srcset="https://carona.com.au/wp-content/uploads/2022/06/Carona-Group-Logo-1.png 2835w, https://carona.com.au/wp-content/uploads/2022/06/Carona-Group-Logo-1-1280x480.png 1280w, https://carona.com.au/wp-content/uploads/2022/06/Carona-Group-Logo-1-980x368.png 980w, https://carona.com.au/wp-content/uploads/2022/06/Carona-Group-Logo-1-480x180.png 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) and (max-width: 1280px) 1280px, (min-width: 1281px) 2835px, 100vw" class="wp-image-12402" /></a>
+			  </div>
+			</div>
+						<div class="et_pb_menu__wrap">
+							<div class="et_pb_menu__menu">
+								<nav class="et-menu-nav"><ul id="menu-main-menu" class="et-menu nav"><li id="menu-item-2180" class="et_pb_menu_page_id-2180 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2180"><a href="https://carona.com.au/about">ABOUT US</a>
+<ul class="sub-menu">
+	<li id="menu-item-9553" class="et_pb_menu_page_id-9553 menu-item menu-item-type-custom menu-item-object-custom menu-item-9553"><a href="/about/">About Us</a></li>
+	<li id="menu-item-9599" class="et_pb_menu_page_id-9599 menu-item menu-item-type-custom menu-item-object-custom menu-item-9599"><a href="/meet-the-team/">Our People</a></li>
+	<li id="menu-item-9557" class="et_pb_menu_page_id-9557 menu-item menu-item-type-custom menu-item-object-custom menu-item-9557"><a href="/careers/">Careers</a></li>
+	<li id="menu-item-9600" class="et_pb_menu_page_id-9600 menu-item menu-item-type-custom menu-item-object-custom menu-item-9600"><a href="/news/">News</a></li>
+</ul>
+</li>
+<li id="menu-item-7426" class="et_pb_menu_page_id-7426 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7426"><a href="#">PRODUCTS</a>
+<ul class="sub-menu">
+	<li id="menu-item-7427" class="et_pb_menu_page_id-7427 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7427"><a href="#">By Industry</a>
+	<ul class="sub-menu">
+		<li id="menu-item-7430" class="et_pb_menu_page_id-7430 menu-item menu-item-type-custom menu-item-object-custom menu-item-7430"><a href="/product-range/mining-construction/">Mining &#038; Construction</a></li>
+		<li id="menu-item-7431" class="et_pb_menu_page_id-7431 menu-item menu-item-type-custom menu-item-object-custom menu-item-7431"><a href="/product-range/logistics-warehouse/">Logistics &#038; Warehouse</a></li>
+	</ul>
+</li>
+	<li id="menu-item-7435" class="et_pb_menu_page_id-7435 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7435"><a href="#">By Product</a>
+	<ul class="sub-menu">
+		<li id="menu-item-7436" class="et_pb_menu_page_id-7436 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7436"><a href="/product-range/traffic-doors/">TRAFFIC DOORS</a>
+		<ul class="sub-menu">
+			<li id="menu-item-7437" class="et_pb_menu_page_id-7437 menu-item menu-item-type-custom menu-item-object-custom menu-item-7437"><a href="/product/thermal-traffic-doors/">Thermal Traffic Door</a></li>
+			<li id="menu-item-7438" class="et_pb_menu_page_id-7438 menu-item menu-item-type-custom menu-item-object-custom menu-item-7438"><a href="/product/pvc-swing-doors/">PVC Swing Doors</a></li>
+			<li id="menu-item-7440" class="et_pb_menu_page_id-7440 menu-item menu-item-type-custom menu-item-object-custom menu-item-7440"><a href="/product/personnel-access-doors/">Personnel Access Doors</a></li>
+			<li id="menu-item-7441" class="et_pb_menu_page_id-7441 menu-item menu-item-type-custom menu-item-object-custom menu-item-7441"><a href="/product/sliding-pedestrian-access-doors/">Sliding Pedestrian Access Doors</a></li>
+		</ul>
+</li>
+		<li id="menu-item-14173" class="et_pb_menu_page_id-13669 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-14173"><a href="https://carona.com.au/high-speed-rapid-roll-doors/">HIGH SPEED RAPID ROLL DOORS</a>
+		<ul class="sub-menu">
+			<li id="menu-item-9067" class="et_pb_menu_page_id-9067 menu-item menu-item-type-custom menu-item-object-custom menu-item-9067"><a href="/product/movidor-ambient-temperature-rapid-door/">Movidor Ambient Temperature Rapid Door</a></li>
+			<li id="menu-item-9068" class="et_pb_menu_page_id-9068 menu-item menu-item-type-custom menu-item-object-custom menu-item-9068"><a href="/product/movitherm-coolroom-rapid-door/">Movitherm Coolroom Rapid Door</a></li>
+			<li id="menu-item-9069" class="et_pb_menu_page_id-9069 menu-item menu-item-type-custom menu-item-object-custom menu-item-9069"><a href="/product/movichill-freezer-rapid-door/">Movichill Freezer Rapid Door</a></li>
+			<li id="menu-item-9368" class="et_pb_menu_page_id-9368 menu-item menu-item-type-custom menu-item-object-custom menu-item-9368"><a href="https://carona.com.au/product/movishutter-sectional-rapid-door/">Movishutter High Speed Roller Shutter Door</a></li>
+		</ul>
+</li>
+		<li id="menu-item-7481" class="et_pb_menu_page_id-7481 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7481"><a href="/product-range/pvc/">PVC STRIP PRODUCTS</a>
+		<ul class="sub-menu">
+			<li id="menu-item-7482" class="et_pb_menu_page_id-7482 menu-item menu-item-type-custom menu-item-object-custom menu-item-7482"><a href="/product/pvc-strip-curtains/">PVC Strip Door Curtains</a></li>
+			<li id="menu-item-7483" class="et_pb_menu_page_id-7483 menu-item menu-item-type-custom menu-item-object-custom menu-item-7483"><a href="/product/premium-flexible-pvc/">Flexible PVC Rolls</a></li>
+			<li id="menu-item-7484" class="et_pb_menu_page_id-7484 menu-item menu-item-type-custom menu-item-object-custom menu-item-7484"><a href="/product/compass-system-truck-mounted-sliding-curtains/">Compass Refrigeration Transport</a></li>
+		</ul>
+</li>
+		<li id="menu-item-13062" class="et_pb_menu_page_id-13062 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-13062"><a href="/impact-protection-and-door-support/">IMPACT PROTECTION</a>
+		<ul class="sub-menu">
+			<li id="menu-item-13063" class="et_pb_menu_page_id-13063 menu-item menu-item-type-custom menu-item-object-custom menu-item-13063"><a href="/bollards/">Bollards</a></li>
+			<li id="menu-item-13064" class="et_pb_menu_page_id-13064 menu-item menu-item-type-custom menu-item-object-custom menu-item-13064"><a href="/bump-rails/">Bump Rails</a></li>
+		</ul>
+</li>
+	</ul>
+</li>
+	<li id="menu-item-9072" class="et_pb_menu_page_id-9072 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9072"><a href="/product-range/spare-parts/">Spare Parts</a>
+	<ul class="sub-menu">
+		<li id="menu-item-9074" class="et_pb_menu_page_id-9074 menu-item menu-item-type-custom menu-item-object-custom menu-item-9074"><a href="/product-range/spare-parts/2400-series-swing-doors/">2400 Series Swing Doors</a></li>
+		<li id="menu-item-9077" class="et_pb_menu_page_id-9077 menu-item menu-item-type-custom menu-item-object-custom menu-item-9077"><a href="/product-range/spare-parts/3000-series-swing-doors/">3000 Series Swing Doors</a></li>
+		<li id="menu-item-9073" class="et_pb_menu_page_id-9073 menu-item menu-item-type-custom menu-item-object-custom menu-item-9073"><a href="/product-range/spare-parts/4500-series-swing-doors/">4500 Series Swing Doors</a></li>
+		<li id="menu-item-9075" class="et_pb_menu_page_id-9075 menu-item menu-item-type-custom menu-item-object-custom menu-item-9075"><a href="/product-range/spare-parts/compass-system/">Compass System</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-9078" class="et_pb_menu_page_id-9078 menu-item menu-item-type-custom menu-item-object-custom menu-item-9078"><a href="/recent-project/">RECENT PROJECTS</a></li>
+<li id="menu-item-9079" class="et_pb_menu_page_id-9079 menu-item menu-item-type-custom menu-item-object-custom menu-item-9079"><a href="/servicing/">SERVICING</a></li>
+</ul></nav>
+							</div>
+							
+							
+							<div class="et_mobile_nav_menu">
+				<div class="mobile_nav closed">
+					<span class="mobile_menu_bar"></span>
+				</div>
+			</div>
+						</div>
+						
+					</div>
+				</div><div id="mobileaddtocartbag" class="et_pb_module et_pb_image et_pb_image_2_tb_header">
+				
+				
+				
+				
+				<a href="/request-a-quote/"><span class="et_pb_image_wrap "><img decoding="async" width="24" height="24" src="https://carona.com.au/wp-content/uploads/2022/06/shopping-bag-1-svg.png" alt="" title="shopping-bag (1)-svg" class="wp-image-12278" /></span></a>
+			</div><div class="et_pb_module et_pb_code et_pb_code_2_tb_header">
+				
+				
+				
+				
+				
+			</div><div id="mobileaddtocartbagitem" class="et_pb_module et_pb_code et_pb_code_3_tb_header  et_pb_text_align_right">
+				
+				
+				
+				
+				<div class="et_pb_code_inner"><div class="ywraq_number_items" data-show_url="yes" data-item_name="item" data-item_plural_name="items"><a href="https://carona.com.au/request-a-quote/">0 <span>items</span></a></div></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>		</div>
+	</header>
+	<div id="et-main-area">
+	
+<div id="main-content">
+
+
+			
+				<article id="post-7368" class="post-7368 page type-page status-publish hentry">
+
+				
+					<div class="entry-content">
+					<div class="et-l et-l--post">
+			<div class="et_builder_inner_content et_pb_gutters3">
+		<div class="et_pb_section et_pb_section_0 et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_0 rs1">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p style="text-align: center;">Door &amp; Barrier Systems for Energy<br />
+&amp; Hygiene Control</p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_1 rs1">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_1  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_1  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p style="text-align: center;">Protect your environment</p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_2">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_2  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_button_module_wrapper et_pb_button_0_wrapper et_pb_button_alignment_right et_pb_button_alignment_tablet_center et_pb_button_alignment_phone_center et_pb_module ">
+				<a id="custom-button" class="et_pb_button et_pb_button_0 et_pb_bg_layout_light" href="https://carona.com.au/about/">BE INSPIRED</a>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_2 et_pb_column_3  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_button_module_wrapper et_pb_button_1_wrapper et_pb_button_alignment_left et_pb_button_alignment_tablet_center et_pb_button_alignment_phone_center et_pb_module ">
+				<a id="custom-button" class="et_pb_button et_pb_button_1 et_pb_bg_layout_light" href="https://carona.com.au/shop/">OUR PRODUCTS</a>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_3">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_4  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_icon et_pb_icon_0">
+				<a href="#section-2" ><span class="et_pb_icon_wrap "><span class="et-pb-icon"></span></span></a>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_2 et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div id="hygiene" class="et_pb_row et_pb_row_4 et_pb_equal_columns et_pb_gutters1">
+				<div class="et_pb_column et_pb_column_1_4 et_pb_column_5  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_2 display-inline  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Energy Control</p></div>
+			</div><div class="et_pb_module et_pb_image et_pb_image_0 display-inline">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="103" height="107" src="https://carona.com.au/wp-content/uploads/2022/02/Group-63.png" alt="" title="Group 63" class="wp-image-7370" /></span>
+			</div><div class="et_pb_module et_pb_divider et_pb_divider_0 et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_3 margin-bottom-45  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Dust, dirt other contaminates can do untold damage to sealed or sterile environments. Don’t risk contamination, or the health of your staff or customers. <strong>Get peace of mind</strong> knowing our doors and barrier systems will protect your environment.</p></div>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_2_wrapper  et_pb_module ">
+				<a class="et_pb_button et_pb_button_2 et_pb_bg_layout_light" href="">LEARN MORE</a>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_6  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_4 display-inline  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Traffic Control</p></div>
+			</div><div class="et_pb_module et_pb_image et_pb_image_1 display-inline">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="108" height="108" src="https://carona.com.au/wp-content/uploads/2022/03/Group-105.png" alt="" title="Group-105" srcset="https://carona.com.au/wp-content/uploads/2022/03/Group-105.png 108w, https://carona.com.au/wp-content/uploads/2022/03/Group-105-100x100.png 100w" sizes="(max-width: 108px) 100vw, 108px" class="wp-image-10562" /></span>
+			</div><div class="et_pb_module et_pb_divider et_pb_divider_1 et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_5 margin-bottom-45  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">Don’t risk collisions, injuries or confusion. Our traffic doors are <strong>designed for high-impact, high traffic environments</strong>, whether it’s a hospital corridor, or a factory loading area. Gain easy access without sacrificing safety.</div>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_3_wrapper  et_pb_module ">
+				<a class="et_pb_button et_pb_button_3 et_pb_bg_layout_light" href="">LEARN MORE</a>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_7  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_6 display-inline  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Temperature Control</p></div>
+			</div><div class="et_pb_module et_pb_image et_pb_image_2 display-inline">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="58" height="100" src="https://carona.com.au/wp-content/uploads/2022/03/Group-65.png" alt="" title="Group-65" class="wp-image-10563" /></span>
+			</div><div class="et_pb_module et_pb_divider et_pb_divider_2 et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_7 margin-bottom-45  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">Fluctuating temperatures can spell disaster in a food preparation, storage or supermarket environments. Our fridge, freezer and coolroom doors are <strong>durable, cost effective and easy to maintain.</strong></div>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_4_wrapper  et_pb_module ">
+				<a class="et_pb_button et_pb_button_4 et_pb_bg_layout_light" href="">LEARN MORE</a>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_8  et_pb_css_mix_blend_mode_passthrough et-last-child et_pb_column_empty">
+				
+				
+				
+				
+				
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_3 et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_5">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_9  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_8  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">We design and deliver barrier and door systems for energy efficiency, safety and hygiene control.</div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_9  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">From our factory in western Sydney we service industries across Australia, including mining and construction, retail, logistics and warehousing, healthcare and research, manufacturing and food processing industries.</p>
+<p>You need confidence that your equipment will last the distance and deliver outstanding value. When energy control, hygiene and security count, <b>Carona Group is the right choice. </b></p>
+<p>Our track record means that when you choose Carona Group you can depend on the quality of our service and the value of our products.</div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_2 et_pb_column_10  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_code et_pb_code_0">
+				
+				
+				
+				
+				
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_6">
+				<div class="et_pb_column et_pb_column_1_3 et_pb_column_11  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_3">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="400" height="400" src="https://carona.com.au/wp-content/uploads/2023/10/Carona-Group-Personelle-Access-Doors.webp" alt="" title="Carona-Group-Personelle-Access-Doors" srcset="https://carona.com.au/wp-content/uploads/2023/10/Carona-Group-Personelle-Access-Doors.webp 400w, https://carona.com.au/wp-content/uploads/2023/10/Carona-Group-Personelle-Access-Doors-300x300.webp 300w, https://carona.com.au/wp-content/uploads/2023/10/Carona-Group-Personelle-Access-Doors-150x150.webp 150w, https://carona.com.au/wp-content/uploads/2023/10/Carona-Group-Personelle-Access-Doors-100x100.webp 100w" sizes="(max-width: 400px) 100vw, 400px" class="wp-image-14636" /></span>
+			</div><div class="et_pb_module et_pb_text et_pb_text_10  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">Traffic Doors</div>
+			</div><div class="et_pb_module et_pb_divider et_pb_divider_3 et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_11 et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">Thermal Traffic Doors</div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_12 et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">Sliding Pedestrian Access Doors</div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_13 et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">PVC Swing Doors</div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_14 et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">Personelle Access Doors</div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_15  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">Auto Slider Doors</div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_16 et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>View All</p></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_3 et_pb_column_12  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_4">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="400" height="400" src="https://carona.com.au/wp-content/uploads/2023/10/Carona-Group-Rapid-Roller-Doors.webp" alt="" title="Carona-Group-Rapid-Roller-Doors" srcset="https://carona.com.au/wp-content/uploads/2023/10/Carona-Group-Rapid-Roller-Doors.webp 400w, https://carona.com.au/wp-content/uploads/2023/10/Carona-Group-Rapid-Roller-Doors-300x300.webp 300w, https://carona.com.au/wp-content/uploads/2023/10/Carona-Group-Rapid-Roller-Doors-150x150.webp 150w, https://carona.com.au/wp-content/uploads/2023/10/Carona-Group-Rapid-Roller-Doors-100x100.webp 100w" sizes="(max-width: 400px) 100vw, 400px" class="wp-image-14638" /></span>
+			</div><div class="et_pb_module et_pb_text et_pb_text_17  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">Rapid Roll Doors</div>
+			</div><div class="et_pb_module et_pb_divider et_pb_divider_4 et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_18 et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">Movidor Ambient Temperature Door</div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_19  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">Movishutter Sectional Door</div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_20 et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">Movichill Freezer Door</div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_21 et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">Movitherm Chiller Door</div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_22 et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>View All</p></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_3 et_pb_column_13  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_5">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="400" height="400" src="https://carona.com.au/wp-content/uploads/2023/10/Carona-Group-PVC-Doors.webp" alt="" title="Carona-Group-PVC-Doors" srcset="https://carona.com.au/wp-content/uploads/2023/10/Carona-Group-PVC-Doors.webp 400w, https://carona.com.au/wp-content/uploads/2023/10/Carona-Group-PVC-Doors-300x300.webp 300w, https://carona.com.au/wp-content/uploads/2023/10/Carona-Group-PVC-Doors-150x150.webp 150w, https://carona.com.au/wp-content/uploads/2023/10/Carona-Group-PVC-Doors-100x100.webp 100w" sizes="(max-width: 400px) 100vw, 400px" class="wp-image-14637" /></span>
+			</div><div class="et_pb_module et_pb_text et_pb_text_23  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">PVC Doors &amp; Curtains</div>
+			</div><div class="et_pb_module et_pb_divider et_pb_divider_5 et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_24 et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">PVC Swing Doors</div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_25  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">Truck Mounted Sliding Curtains</div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_26 et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">PVC Strip Curtains</div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_27 et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>View All</p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_4 et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div id="section-2" class="et_pb_row et_pb_row_7">
+				<div class="et_pb_column et_pb_column_3_4 et_pb_column_14  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_28  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p style="text-align: left;">Installing inferior, overseas made doors and barriers will cost you time, energy, money and your reputation.</p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_29 margin-bottom-30  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">With 30 years’ experience, Carona Group is a partner you can trust.</div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_30 p-bottom-15 li-bottom-15 ul-left-35 margin-bottom-30  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">Our solutions protect</p>
+<ul>
+<li>The safety of your staff, customers and stock.</li>
+<li>Productivity, efficiency and deadlines important to your business</li>
+<li>Supply chains interruption</li>
+<li>Project scope, timelines and budgets from delay driven blow out</li>
+</ul>
+<p>From the harshest environments to the most sensitive, our team will deliver the best solution for your unique needs from the simplest strip curtain to the most complex hermetically sealed door.</p>
+<p>Every Carona Group product is designed and manufactured in our factory in Western Sydney, which means short deadlines and fast delivery and installation.</p>
+<p>Plus, our dedicated on-call service team ensures regular servicing and maintenance, so your workplace runs smoothly day after day, year after year.</p>
+<p>Trust Carona Group to protect your assets, your people, your products and your reputation.</div>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_5_wrapper  et_pb_module ">
+				<a class="et_pb_button et_pb_button_5 et_pb_bg_layout_light" href="https://carona.com.au/contact/">CONTACT OUR TEAM</a>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_15  et_pb_css_mix_blend_mode_passthrough et-last-child et_pb_column_empty">
+				
+				
+				
+				
+				
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_5 et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_8">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_16  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_31  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Our Clients</p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_9 client-row et_pb_gutters2">
+				<div class="et_pb_column et_pb_column_1_6 et_pb_column_17  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_6">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="214" height="150" src="https://carona.com.au/wp-content/uploads/2022/02/auspost-grey.png" alt="" title="auspost-grey" class="wp-image-7376" /></span>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_6 et_pb_column_18  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_7">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="213" height="150" src="https://carona.com.au/wp-content/uploads/2022/02/endeavourgroup-grey.png" alt="" title="endeavourgroup-grey" class="wp-image-7377" /></span>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_6 et_pb_column_19  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_8">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="213" height="150" src="https://carona.com.au/wp-content/uploads/2022/02/dan-murphys-grey.png" alt="" title="dan-murphys-grey" class="wp-image-7378" /></span>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_6 et_pb_column_20  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_9">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="213" height="150" src="https://carona.com.au/wp-content/uploads/2022/02/boral-grey.png" alt="" title="boral-grey" class="wp-image-7379" /></span>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_6 et_pb_column_21  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_10">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="213" height="150" src="https://carona.com.au/wp-content/uploads/2022/02/inten-grey.png" alt="" title="inten-grey" class="wp-image-7380" /></span>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_6 et_pb_column_22  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_11">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="214" height="150" src="https://carona.com.au/wp-content/uploads/2022/02/woolies-grey.png" alt="" title="woolies-grey" class="wp-image-7381" /></span>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_10 client-row2 et_pb_gutters2">
+				<div class="et_pb_column et_pb_column_1_6 et_pb_column_23  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_12">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="214" height="150" src="https://carona.com.au/wp-content/uploads/2022/02/ramsay-grey.png" alt="" title="ramsay-grey" class="wp-image-7382" /></span>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_6 et_pb_column_24  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_13">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="213" height="150" src="https://carona.com.au/wp-content/uploads/2022/02/mainbrace-grey.png" alt="" title="mainbrace-grey" class="wp-image-7383" /></span>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_6 et_pb_column_25  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_14">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="213" height="150" src="https://carona.com.au/wp-content/uploads/2022/02/harris-farm-grey.png" alt="" title="harris-farm-grey" class="wp-image-7384" /></span>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_6 et_pb_column_26  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_15">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="213" height="150" src="https://carona.com.au/wp-content/uploads/2022/02/david-jones-grey.png" alt="" title="david-jones-grey" class="wp-image-7385" /></span>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_6 et_pb_column_27  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_16">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="213" height="150" src="https://carona.com.au/wp-content/uploads/2022/02/costco-grey.png" alt="" title="costco-grey" class="wp-image-7386" /></span>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_6 et_pb_column_28  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_17">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="214" height="150" src="https://carona.com.au/wp-content/uploads/2022/02/coles-grey.png" alt="" title="coles-grey" class="wp-image-7387" /></span>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_6 et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_11">
+				<div class="et_pb_column et_pb_column_3_4 et_pb_column_29  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_32  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p style="text-align: left;">We Feel Your Frustration</p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_33 p-bottom-15 li-bottom-15 ul-left-35 margin-bottom-30  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">We know projects large and small can change – scope, specifications, and timelines can change. You need a partner that can adjust and work with you.</p>
+<p>We’ve partnered with hundreds of businesses, from corner stores to mining giants in direct supply and sub-contracting roles, so we know how to adapt to changing project priorities.</div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_30  et_pb_css_mix_blend_mode_passthrough et-last-child et_pb_column_empty">
+				
+				
+				
+				
+				
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_12">
+				<div class="et_pb_column et_pb_column_1_4 et_pb_column_31  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_18">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="95" height="121" src="https://carona.com.au/wp-content/uploads/2022/02/Group-85.png" alt="" title="Group 85" class="wp-image-7373" /></span>
+			</div><div class="et_pb_module et_pb_text et_pb_text_34  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">Success Built on Trust</div>
+			</div><div class="et_pb_module et_pb_divider et_pb_divider_6 et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_35 p-bottom-15 li-bottom-15 ul-left-35 margin-bottom-30  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">We’re proud to be an Australian manufacturing success story. Over our 30 years in business, we’ve grown and our clients have grown with us, from global retailers like Woolworths to small businesses like Poacher’s Pantry in the Hunter Valley, NSW.</p>
+<p>Every Carona Group product is designed and made in our factory in New South Wales. This all adds up to unmatched quality and value. Each door and every frame is built to last and delivered on time.</div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_32  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_19">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="92" height="124" src="https://carona.com.au/wp-content/uploads/2022/02/Group-84.png" alt="" title="Group 84" class="wp-image-7374" /></span>
+			</div><div class="et_pb_module et_pb_text et_pb_text_36  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">Certified Quality</div>
+			</div><div class="et_pb_module et_pb_divider et_pb_divider_7 et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_37 p-bottom-15 li-bottom-15 ul-left-35 margin-bottom-30  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">We know that it’s still possible to manufacture products that are both high-quality and exceptional value.</p>
+<p>When you buy a Carona Group product, you gain the confidence that what you’re getting is fit for purpose. Our products Eco-Specified, HACCP Certified, Corrosion-Resistant and Energy-Saving.</div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_33  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_20">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="121" height="122" src="https://carona.com.au/wp-content/uploads/2022/02/Group-86.png" alt="" title="Group 86" srcset="https://carona.com.au/wp-content/uploads/2022/02/Group-86.png 121w, https://carona.com.au/wp-content/uploads/2022/02/Group-86-100x100.png 100w" sizes="(max-width: 121px) 100vw, 121px" class="wp-image-7375" /></span>
+			</div><div class="et_pb_module et_pb_text et_pb_text_38  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">Unmatched Service</div>
+			</div><div class="et_pb_module et_pb_divider et_pb_divider_8 et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_39 p-bottom-15 li-bottom-15 ul-left-35 margin-bottom-30  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">In your industry, you need the confidence that your equipment is fully supported. Every Carona Group product is designed for low maintenance, so you save on running costs right from day one.</p>
+<p>When you do need to get are placement part, our responsive service team will be out to your site on time, every time.</p>
+<p>We’ll even service competitor products, if that’s what it takes to get your facility back up and running.</div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_34  et_pb_css_mix_blend_mode_passthrough et-last-child et_pb_column_empty">
+				
+				
+				
+				
+				
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div id="work-carona" class="et_pb_section et_pb_section_7 et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_13">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_35  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_40  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p style="text-align: center;">Working with Carona Group is easy</p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_14 et_pb_gutters2">
+				<div class="et_pb_column et_pb_column_1_4 et_pb_column_36  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_21 display-inline et_pb_image_sticky">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="68" height="68" src="https://carona.com.au/wp-content/uploads/2022/03/Group-119-svg-1.png" alt="" title="Group 119-svg (1)" class="wp-image-10517" /></span>
+			</div><div class="et_pb_module et_pb_text et_pb_text_41 display-inline  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p style="text-align: left;">Schedule a Call or Site Visit</p></div>
+			</div><div class="et_pb_module et_pb_divider et_pb_divider_9 et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_42  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">Contact our team and we’ll work with you to propose an effective door and barrier solution to suit your project scope, budget, and timeframe.</div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_37  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_22 display-inline et_pb_image_sticky">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="68" height="68" src="https://carona.com.au/wp-content/uploads/2022/03/Group-118-svg.png" alt="" title="Group 118-svg" class="wp-image-10518" /></span>
+			</div><div class="et_pb_module et_pb_text et_pb_text_43 display-inline  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p style="text-align: left;">Design &amp; Manufacture</p></div>
+			</div><div class="et_pb_module et_pb_divider et_pb_divider_10 et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_44  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">Whether it’s standard or custom made, our team of engineers will deliver a high-quality, industry-best solution you can rely on.</div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_38  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_23 display-inline et_pb_image_sticky">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="68" height="68" src="https://carona.com.au/wp-content/uploads/2022/03/Group-117-svg.png" alt="" title="Group 117-svg" class="wp-image-10519" /></span>
+			</div><div class="et_pb_module et_pb_text et_pb_text_45 display-inline  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p style="text-align: left;">Install the Best Solution</p></div>
+			</div><div class="et_pb_module et_pb_divider et_pb_divider_11 et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_46  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">Our specialist team will manage the install from start to finish, so your project delivers long-term time, money, and energy savings.</div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_39  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_24 display-inline et_pb_image_sticky">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="68" height="68" src="https://carona.com.au/wp-content/uploads/2022/03/Group-116-svg.png" alt="" title="Group 116-svg" class="wp-image-10520" /></span>
+			</div><div class="et_pb_module et_pb_text et_pb_text_47 display-inline  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p style="text-align: left;">Get Peace<br />
+of Mind</p></div>
+			</div><div class="et_pb_module et_pb_divider et_pb_divider_12 et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_48  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">With fuss-free scheduled servicing and maintenance you’ll enjoy the peace of mind that comes from installing quality door and barrier systems.</div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_15">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_40  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_button_module_wrapper et_pb_button_6_wrapper et_pb_button_alignment_center et_pb_button_alignment_tablet_center et_pb_button_alignment_phone_center et_pb_module ">
+				<a class="et_pb_button et_pb_button_6 et_pb_bg_layout_light" href="https://carona.com.au/contact/">LEARN MORE</a>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_8 et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_16 et_pb_equal_columns">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_41  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_25">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="1150" height="650" src="https://carona.com.au/wp-content/uploads/2022/02/Preventative-Maintaince.png" alt="" title="Preventative-Maintaince" srcset="https://carona.com.au/wp-content/uploads/2022/02/Preventative-Maintaince.png 1150w, https://carona.com.au/wp-content/uploads/2022/02/Preventative-Maintaince-980x554.png 980w, https://carona.com.au/wp-content/uploads/2022/02/Preventative-Maintaince-480x271.png 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) 1150px, 100vw" class="wp-image-7396" /></span>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_2 et_pb_column_42  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_49  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Plus we offer a comprehensive range of spare parts.</p></div>
+			</div><div class="et_pb_module et_pb_divider et_pb_divider_13 et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_50  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Every product is ready to install as-is or can be fully customised for your unique environment.</p>
+<p>With over 50 customisable options we are confident we can deliver an exceptional product to meet your project requirements.</p></div>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_7_wrapper et_pb_button_alignment_left et_pb_button_alignment_tablet_center et_pb_button_alignment_phone_center et_pb_module ">
+				<a class="et_pb_button et_pb_button_7 et_pb_bg_layout_light" href="https://carona.com.au/contact/">CONTACT US TODAY</a>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_9 et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_17">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_43  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_51  et_pb_text_align_left et_pb_text_align_center-phone et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">Blog</div>
+			</div><div class="et_pb_module et_pb_divider et_pb_divider_14 et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_18">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_44  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div id="home-carousel" class="et_pb_module dsm_blog_carousel dsm_blog_carousel_0">
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_module_inner">
+					<div class="dsm-blog-carousel" data-orientation='horizontal' data-loop='' data-speed='500' data-columnsdesktop='3' data-columnsphone='1' data-columnstablet='2' data-autoplay='off' data-autoplayspeed='5000' data-ordernumber='0' data-spacing='30' data-spacingtablet='30' data-spacingphone='30' data-effect='default' data-effect-shadows='off' data-effect-coverflow-rotate='30' data-effect-coverflow-depth='100' data-centered='off' data-multi-row='off' data-row='1' data-rowstablet='1' data-rowsphone='1' data-pagi-button-style='bullets' data-pause-on-hover='off' data-touch-move='off' data-grab='off' data-mousewheel='off'>
+				<div class="swiper-container dsm_blog_carousel_wrapper" dir="ltr">
+					<div class="dsm-blog-carousel-wrapper swiper-wrapper">
+						
+				<article class="dsm-blog-carousel-item swiper-slide">
+					<div class="dsm-grid-post-holder-inner">
+													<div class="dsm-entry-image">
+																<div class="dsm-entry-thumbnail">
+																			<a href="https://carona.com.au/rapid-roll-door-service-maintenance-dev/">
+																		<img loading="lazy" decoding="async" width="500" height="500" src="https://carona.com.au/wp-content/uploads/2022/02/1-1.png" class="skip-lazy wp-post-image" alt="" srcset="https://carona.com.au/wp-content/uploads/2022/02/1-1.png 500w, https://carona.com.au/wp-content/uploads/2022/02/1-1-480x480.png 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 500px, 100vw" />																		</a>
+																	</div>
+							</div>
+						
+						<div class="dsm-entry-wrapper">
+														<header class="dsm-entry-header">
+									<h2 class="dsm-entry-title">
+																					<a href="https://carona.com.au/rapid-roll-door-service-maintenance-dev/">Rapid Roll Door Service <br>&#038; Maintenance</a>
+																			</h2>
+								</header>
+						
+						
+														<div class="dsm-entry-content">
+								<div class="dsm-post-excerpt">
+									<p>How our rapid door repair and maintenance service can make your site safer and save you money. Rapid doors, also known as rapid roll doors, are ...</p>
+								</div>
+							</div>
+							
+																	<div class="dsm-readmore-wrap et_pb_bg_layout_light">
+																					<a href="https://carona.com.au/rapid-roll-door-service-maintenance-dev/"  class="dsm-readmore-btn et_pb_button" data-icon="5" target="">Read More</a>
+																			</div>
+																					</div>
+					</div>
+				</article>
+
+				
+				<article class="dsm-blog-carousel-item swiper-slide">
+					<div class="dsm-grid-post-holder-inner">
+													<div class="dsm-entry-image">
+																<div class="dsm-entry-thumbnail">
+																			<a href="https://carona.com.au/how-air-curtains-save-money-protect-your-environment/">
+																		<img loading="lazy" decoding="async" width="675" height="675" src="https://carona.com.au/wp-content/uploads/2021/08/2.jpg" class="skip-lazy wp-post-image" alt="Out Doors" srcset="https://carona.com.au/wp-content/uploads/2021/08/2.jpg 800w, https://carona.com.au/wp-content/uploads/2021/08/2-300x300.jpg 300w, https://carona.com.au/wp-content/uploads/2021/08/2-150x150.jpg 150w, https://carona.com.au/wp-content/uploads/2021/08/2-768x768.jpg 768w, https://carona.com.au/wp-content/uploads/2021/08/2-600x600.jpg 600w, https://carona.com.au/wp-content/uploads/2021/08/2-100x100.jpg 100w" sizes="(max-width: 675px) 100vw, 675px" />																		</a>
+																	</div>
+							</div>
+						
+						<div class="dsm-entry-wrapper">
+														<header class="dsm-entry-header">
+									<h2 class="dsm-entry-title">
+																					<a href="https://carona.com.au/how-air-curtains-save-money-protect-your-environment/">How Air Curtains Save Money &#038; Protect Your Environment</a>
+																			</h2>
+								</header>
+						
+						
+														<div class="dsm-entry-content">
+								<div class="dsm-post-excerpt">
+									<p>Installing an air curtain door can save energy, improve health and safety and protect your environment from contamination……</p>
+								</div>
+							</div>
+							
+																	<div class="dsm-readmore-wrap et_pb_bg_layout_light">
+																					<a href="https://carona.com.au/how-air-curtains-save-money-protect-your-environment/"  class="dsm-readmore-btn et_pb_button" data-icon="5" target="">Read More</a>
+																			</div>
+																					</div>
+					</div>
+				</article>
+
+				
+				<article class="dsm-blog-carousel-item swiper-slide">
+					<div class="dsm-grid-post-holder-inner">
+													<div class="dsm-entry-image">
+																<div class="dsm-entry-thumbnail">
+																			<a href="https://carona.com.au/how-high-speed-doors-can-benefit-your-business/">
+																		<img loading="lazy" decoding="async" width="506" height="675" src="https://carona.com.au/wp-content/uploads/2020/12/Rapid-Door-1-scaled.jpg" class="skip-lazy wp-post-image" alt="Rapid Door" srcset="https://carona.com.au/wp-content/uploads/2020/12/Rapid-Door-1-scaled.jpg 1920w, https://carona.com.au/wp-content/uploads/2020/12/Rapid-Door-1-225x300.jpg 225w, https://carona.com.au/wp-content/uploads/2020/12/Rapid-Door-1-768x1024.jpg 768w, https://carona.com.au/wp-content/uploads/2020/12/Rapid-Door-1-1152x1536.jpg 1152w, https://carona.com.au/wp-content/uploads/2020/12/Rapid-Door-1-1536x2048.jpg 1536w, https://carona.com.au/wp-content/uploads/2020/12/Rapid-Door-1-600x800.jpg 600w" sizes="(max-width: 506px) 100vw, 506px" />																		</a>
+																	</div>
+							</div>
+						
+						<div class="dsm-entry-wrapper">
+														<header class="dsm-entry-header">
+									<h2 class="dsm-entry-title">
+																					<a href="https://carona.com.au/how-high-speed-doors-can-benefit-your-business/">How High-Speed Doors Can Benefit Your Business</a>
+																			</h2>
+								</header>
+						
+						
+														<div class="dsm-entry-content">
+								<div class="dsm-post-excerpt">
+									<p>There are many reasons why businesses can benefit from high-speed doors. At Carona we offer installations, high-speed door maintenance……</p>
+								</div>
+							</div>
+							
+																	<div class="dsm-readmore-wrap et_pb_bg_layout_light">
+																					<a href="https://carona.com.au/how-high-speed-doors-can-benefit-your-business/"  class="dsm-readmore-btn et_pb_button" data-icon="5" target="">Read More</a>
+																			</div>
+																					</div>
+					</div>
+				</article>
+
+				
+					</div>
+				</div>
+				
+				<div class="swiper-container-horizontal">
+					
+				</div>
+			</div>
+				</div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_10 et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_19 et_pb_equal_columns">
+				<div class="et_pb_column et_pb_column_3_5 et_pb_column_45  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_26">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="1024" height="671" src="https://carona.com.au/wp-content/uploads/2022/02/Carona-Delivery-Truck-2@2x-1024x671.png" alt="" title="Carona-Delivery-Truck-2@2x" srcset="https://carona.com.au/wp-content/uploads/2022/02/Carona-Delivery-Truck-2@2x-1024x671.png 1024w, https://carona.com.au/wp-content/uploads/2022/02/Carona-Delivery-Truck-2@2x-300x196.png 300w, https://carona.com.au/wp-content/uploads/2022/02/Carona-Delivery-Truck-2@2x-768x503.png 768w, https://carona.com.au/wp-content/uploads/2022/02/Carona-Delivery-Truck-2@2x-1536x1006.png 1536w, https://carona.com.au/wp-content/uploads/2022/02/Carona-Delivery-Truck-2@2x.png 1710w" sizes="(max-width: 1024px) 100vw, 1024px" class="wp-image-8907" /></span>
+			</div>
+			</div><div class="et_pb_column et_pb_column_2_5 et_pb_column_46  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_52  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>We&#8217;re here to help</p></div>
+			</div><div class="et_pb_module et_pb_divider et_pb_divider_15 et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_53  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p style="text-align: left;">Don’t settle for an inferior product. Protect your assets, your people, your products, and your reputation with Carona Group.</p>
+<p style="text-align: left;">Our experienced team guarantees end-to-end quality and peace of mind throughout the design, manufacture, and installation process.</p>
+<p style="text-align: left;">Contact us today to get the solution you need.</p></div>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_8_wrapper et_pb_button_alignment_left et_pb_module ">
+				<a class="et_pb_button et_pb_button_8 et_pb_bg_layout_light" href="https://carona.com.au/contact">CONTACT US </a>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>		</div>
+	</div>
+						</div>
+
+				
+				</article>
+
+			
+
+</div>
+
+	<footer class="et-l et-l--footer">
+			<div class="et_builder_inner_content et_pb_gutters3">
+		<div id="footer-section1" class="et_pb_section et_pb_section_0_tb_footer et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div id="footer-section1-row" class="et_pb_row et_pb_row_0_tb_footer et_pb_equal_columns et_pb_gutters1">
+				<div class="et_pb_column et_pb_column_1_5 et_pb_column_0_tb_footer  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_0_tb_footer">
+				
+				
+				
+				
+				<a href="https://carona.com.au/"><span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="354" height="120" src="https://carona.com.au/wp-content/uploads/2022/02/Carona-Group-Logo-White.png" alt="" title="Carona-Group-Logo-White" srcset="https://carona.com.au/wp-content/uploads/2022/02/Carona-Group-Logo-White.png 354w, https://carona.com.au/wp-content/uploads/2022/02/Carona-Group-Logo-White-300x102.png 300w" sizes="(max-width: 354px) 100vw, 354px" class="wp-image-7358" /></span></a>
+			</div><div class="et_pb_module et_pb_text et_pb_text_0_tb_footer  et_pb_text_align_left et_pb_text_align_center-tablet et_pb_text_align_left-phone et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>FOLLOW US</p></div>
+			</div><ul class="et_pb_module et_pb_social_media_follow et_pb_social_media_follow_0_tb_footer clearfix  et_pb_text_align_left et_pb_text_align_center-tablet et_pb_text_align_left-phone et_pb_bg_layout_light">
+				
+				
+				
+				
+				<li
+            class='et_pb_social_media_follow_network_0_tb_footer et_pb_social_icon et_pb_social_network_link  et-social-instagram'><a
+              href='https://www.instagram.com/carona_group/?hl=en'
+              class='icon et_pb_with_border'
+              title='Follow on Instagram'
+               target="_blank"><span
+                class='et_pb_social_media_follow_network_name'
+                aria-hidden='true'
+                >Follow</span></a></li><li
+            class='et_pb_social_media_follow_network_1_tb_footer et_pb_section_video_on_hover et_pb_social_icon et_pb_social_network_link  et-social-linkedin'><a
+              href='https://www.linkedin.com/company/carona-group'
+              class='icon et_pb_with_border'
+              title='Follow on Facebook'
+               target="_blank"><span
+                class='et_pb_social_media_follow_network_name'
+                aria-hidden='true'
+                >Follow</span></a></li><li
+            class='et_pb_social_media_follow_network_2_tb_footer et_pb_section_video_on_hover et_pb_social_icon et_pb_social_network_link  et-social-facebook'><a
+              href='https://www.facebook.com/Caronagroup/'
+              class='icon et_pb_with_border'
+              title='Follow on Facebook'
+               target="_blank"><span
+                class='et_pb_social_media_follow_network_name'
+                aria-hidden='true'
+                >Follow</span></a></li>
+			</ul>
+			</div><div class="et_pb_column et_pb_column_1_5 et_pb_column_1_tb_footer  et_pb_css_mix_blend_mode_passthrough et_pb_column_empty" id="fifcol">
+				
+				
+				
+				
+				
+			</div><div class="et_pb_column et_pb_column_1_5 et_pb_column_2_tb_footer  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_1_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>QUICK LINKS</p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_2_tb_footer et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p><a href="/about">About Us</a></p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_3_tb_footer et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Our Process</p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_4_tb_footer et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p><a href="/recent-projects/">Recent Projects</a></p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_5_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><a href="/servicing/">Service Request</a></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_6_tb_footer et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Careers</p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_7_tb_footer et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p><a href="/meet-the-team/">Meet the Team</a></p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_8_tb_footer et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p><a href="/news/">News</a></p></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_5 et_pb_column_3_tb_footer  et_pb_css_mix_blend_mode_passthrough" id="thrcol">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_9_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>PRODUCTS</p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_10_tb_footer et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">Traffic Doors</div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_11_tb_footer et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">Rapid Roll Doors</div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_12_tb_footer et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Air Curtains</p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_13_tb_footer et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>PVC Curtains</p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_14_tb_footer et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Impact Protection</p></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_5 et_pb_column_4_tb_footer  et_pb_css_mix_blend_mode_passthrough et-last-child" id="fourcol">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_15_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>DOWNLOADS</p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_16_tb_footer et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Installation Information</p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_17_tb_footer et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">Latest Catalogue</div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_18_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>CONTACT</p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_19_tb_footer et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>45 Flinders St, Lawson NSW 2783</p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_20_tb_footer et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><a href="tel:(02) 4702 6655">(02) 4702 6655</a></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_21_tb_footer et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p><a href="mailto:cs@carona.com.au">cs@carona.com.au</a></p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_22_tb_footer et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p><strong>ABN</strong> <strong>:</strong> 70 895 404 358</p></div>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_0_tb_footer_wrapper et_pb_button_alignment_left et_pb_button_alignment_tablet_center et_pb_button_alignment_phone_left et_pb_module ">
+				<a class="et_pb_button et_pb_button_0_tb_footer et_pb_bg_layout_light" href="https://carona.com.au/contact/">CONTACT US</a>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_1_tb_footer_wrapper et_pb_button_alignment_left et_pb_button_alignment_tablet_center et_pb_button_alignment_phone_left et_pb_module ">
+				<a class="et_pb_button et_pb_button_1_tb_footer et_pb_bg_layout_light" href="https://carona.com.au/product-range/spare-parts/">SPARE PARTS</a>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div id="bottom-footer" class="et_pb_section et_pb_section_1_tb_footer et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div id="lastcol" class="et_pb_row et_pb_row_1_tb_footer">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_5_tb_footer  et_pb_css_mix_blend_mode_passthrough et-last-child" id="lastone">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_23_tb_footer  et_pb_text_align_left et_pb_text_align_center-tablet et_pb_text_align_left-phone et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>© Copyright 2023 &#8211; Carona Group Pty Ltd  | <a href="https://carona.com.au/terms-and-conditions/"> Terms &amp; Conditions</a>  |  <a href="https://carona.com.au/privacy-policy/">Privacy Policy</a></p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>		</div>
+	</footer>
+		</div>
+
+			
+		</div>
+		</div>
+
+			
+		<script>
+			window.RS_MODULES = window.RS_MODULES || {};
+			window.RS_MODULES.modules = window.RS_MODULES.modules || {};
+			window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
+			window.RS_MODULES.defered = true;
+			window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
+			window.RS_MODULES.type = 'compiled';
+		</script>
+		<style>	
+	
+header.et-l.et-l--header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+}
+.et-db #et-boc .et-l .et_pb_wc_title_0_tb_body {  
+   margin-bottom: 5px!important;   
+}	
+.et_pb_slide_image, .et_pb_slide_video {
+display: block!important;
+}
+.ty {
+    margin-top: 31px;
+    margin-bottom: -12px;
+}
+.term-spare-parts .yith-ywraq-add-to-quote {
+    display: block;
+}
+
+.woocommerce nav.woocommerce-pagination ul li a, .woocommerce nav.woocommerce-pagination ul li span {
+    font-size: 15px;
+}
+		
+	.spare-products h2.woocommerce-loop-product__title {
+    min-height: 100px;
+}
+/* 22 */
+li#mega-menu-item-13062 {
+    margin-top: 14px !important;
+}	
+ul#mobile_menu1 {
+    height: 300px;
+    overflow-x: auto;
+}	
+h2.woocommerce-loop-product__title {
+    text-align: center;
+}	
+	
+	@media only screen and (min-device-width: 768px) and (max-device-width: 980px) {
+	
+	
+		#hygiene .et_pb_image {
+  
+    margin-top: -90px!important;
+}
+		#hygiene .et_pb_divider_1, #hygiene .et_pb_divider_2, #hygiene .et_pb_divider_0 {
+    margin-top: 0px!important;
+  margin-bottom: 24px!important;
+   
+}
+	
+	h2.woocommerce-loop-product__title {
+    width: 100%;
+	color: red !important;	
+	}
+}
+li#mega-menu-item-13062>.mega-menu-link{
+    font-family: 'Poppins'!important;
+    font-weight: 500!important;
+    line-height: 23px!important;
+    letter-spacing: 0.12px;
+}
+/* ul.mega-sub-menu li a.mega-menu-link {
+    font-family: sans-serif !important;
+    font-weight: 500 !important;
+} */
+.fetured-row .swiper-button-prev {
+    top: 42rem;
+    left: 45% !important;
+}
+.fetured-row .swiper-button-next {
+    right: 45%!important;
+    top: 42rem;
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1000px) {
+	.et_pb_wc_related_products ul.products.columns-5 li.product, .et_pb_wc_upsells ul.products.columns-5 li.product {
+    width: 17.5%!Important;
+		margin-right: 2%!important;
+}
+.fetured-row .swiper-button-prev {
+    top: 37rem;
+    left: 42% !important;
+}
+.fetured-row .swiper-button-next {
+    right: 42%!important;
+    top: 37rem;
+	}
+}
+@media only screen and (min-device-width: 550px) and (max-device-width: 767px) {
+.fetured-row .swiper-button-prev {
+    top: 40rem;
+    left: 40% !important;
+}
+.fetured-row .swiper-button-next {
+    right: 40%!important;
+    top: 40rem;
+	}
+}
+@media screen and (max-width: 549px) {
+.fetured-row .swiper-button-prev {
+    top: 40rem;
+    left: 35% !important;
+}
+.fetured-row .swiper-button-next {
+    right: 35%!important;
+    top: 40rem;
+	}
+}
+@media only screen and (min-device-width: 981px) and (max-device-width: 1152px) {
+	
+span.et-waypoint.et_pb_animation_off.et_pb_animation_off_tablet.et_pb_animation_off_phone.et-pb-icon.et-animated.header-tel-logo {
+    margin-left: -32px;
+    }
+}
+@media only screen and (min-device-width: 981px) and (max-device-width: 1263px) {
+/*     ul#mega-menu-primary-menu li {
+    margin-left: -20px !important;
+    } */
+		.icon-service .et_pb_image_0, .icon-service .et_pb_image_2, .icon-service .et_pb_image_1 {
+   
+    margin-top: 40px;
+}
+	
+	#rev_slider_1_1_wrapper .hermes.tp-bullets {
+    top: 39%!important;
+}
+    
+}
+div#mobileaddtocartbag {
+    position: absolute;
+    top: 26%;
+    right: -9%;
+}
+div#mobileaddtocartbagitem {
+    position: absolute;
+    top: 9%;
+    right: -10%;
+}
+	
+@media only screen and (min-device-width: 767px) and (max-device-width: 980px) {
+div#mobileaddtocartbag {
+    position: absolute;
+    top: 36%;
+    right: -8%;
+}
+div#mobileaddtocartbagitem {
+    position: absolute;
+    top: 31%;
+    right: -8%;
+    }
+}
+@media only screen and (min-device-width: 550px) and (max-device-width: 766px) {
+div#mobileaddtocartbag {
+    position: absolute;
+    top: 32%;
+    right: -8%;
+}
+div#mobileaddtocartbagitem {
+    position: absolute;
+    top: 26%;
+    right: -8%;
+    }
+}
+@media only screen and (min-device-width: 420px) and (max-device-width: 549px) {
+div#mobileaddtocartbag {
+    position: absolute;
+    top: 28%;
+    right: -8%;
+}
+div#mobileaddtocartbagitem {
+    position: absolute;
+    top: 20%;
+    right: -8%;
+    }
+}	
+	
+/* 	@media only screen and (min-device-width: 300px) and (max-device-width: 399px) {
+	.icon-service .et_pb_image_0, .icon-service .et_pb_image_2, .icon-service .et_pb_image_1 {
+  
+    margin-top: 50px;
+}
+	} */
+#mega-menu-wrap-primary-menu #mega-menu-primary-menu>li.mega-menu-megamenu>ul.mega-sub-menu li.mega-menu-column>ul.mega-sub-menu>li#mega-menu-item-7427>a.mega-menu-link {
+    pointer-events: none;
+}
+#mega-menu-wrap-primary-menu #mega-menu-primary-menu>li.mega-menu-megamenu>ul.mega-sub-menu li.mega-menu-column>ul.mega-sub-menu>li#mega-menu-item-7435>a.mega-menu-link {
+    pointer-events: none;
+}	
+.home h2.et_pb_slide_title {
+    margin-top: 25px!important;
+}
+	.single-product .dsm_card_carousel_0_tb_body .swiper-button-prev, .single-product .dsm_card_carousel_0_tb_body .swiper-button-next {
+    
+    margin-top: 61px !important;
+}
+
+@media only screen and (max-width: 768px) {
+.et-db #et-boc .et-l .et_pb_wc_related_products ul.products.columns-5 li.product {
+    
+    margin: unset !Important;
+}
+}
+#mega-menu-wrap-primary-menu #mega-menu-primary-menu>li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item a.mega-menu-link {
+   /* font-weight: 400!important;*/
+}
+</style>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-534NKCH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->	<script type="text/javascript">
+				var et_link_options_data = [{"class":"et_pb_text_11","url":"https:\/\/carona.com.au\/product\/thermal-traffic-doors\/","target":"_self"},{"class":"et_pb_text_12","url":"https:\/\/carona.com.au\/product\/sliding-pedestrian-access-doors\/","target":"_self"},{"class":"et_pb_text_13","url":"https:\/\/carona.com.au\/product\/pvc-swing-doors\/","target":"_self"},{"class":"et_pb_text_14","url":"https:\/\/carona.com.au\/product\/personnel-access-doors\/","target":"_self"},{"class":"et_pb_text_16","url":"https:\/\/carona.com.au\/product-range\/traffic-doors\/","target":"_self"},{"class":"et_pb_text_18","url":"https:\/\/carona.com.au\/product\/ambient-temperature\/","target":"_self"},{"class":"et_pb_text_20","url":"https:\/\/carona.com.au\/product\/coolroom-and-freezer-doors\/","target":"_self"},{"class":"et_pb_text_21","url":"https:\/\/carona.com.au\/product\/ambient-chiller\/","target":"_self"},{"class":"et_pb_text_22","url":"https:\/\/carona.com.au\/product-range\/rapid-roll-doors\/","target":"_self"},{"class":"et_pb_text_24","url":"https:\/\/carona.com.au\/product\/pvc-swing-doors\/","target":"_self"},{"class":"et_pb_text_26","url":"https:\/\/carona.com.au\/product\/pvc-strip-curtains\/","target":"_self"},{"class":"et_pb_text_27","url":"https:\/\/carona.com.au\/product-range\/pvc\/","target":"_self"},{"class":"et_pb_text_2_tb_footer","url":"https:\/\/carona.com.au\/about\/","target":"_self"},{"class":"et_pb_text_3_tb_footer","url":"https:\/\/carona.com.au\/#work-carona","target":"_self"},{"class":"et_pb_text_4_tb_footer","url":"https:\/\/carona.com.au\/recent-project\/","target":"_self"},{"class":"et_pb_text_6_tb_footer","url":"https:\/\/carona.com.au\/careers\/","target":"_self"},{"class":"et_pb_text_7_tb_footer","url":"https:\/\/carona.com.au\/meet-the-team\/","target":"_self"},{"class":"et_pb_text_8_tb_footer","url":"https:\/\/carona.com.au\/news\/","target":"_self"},{"class":"et_pb_text_10_tb_footer","url":"https:\/\/carona.com.au\/product-range\/traffic-doors\/","target":"_self"},{"class":"et_pb_text_11_tb_footer","url":"https:\/\/carona.com.au\/product-range\/rapid-roll-doors\/","target":"_self"},{"class":"et_pb_text_12_tb_footer","url":"https:\/\/carona.com.au\/product-range\/air-curtains\/","target":"_self"},{"class":"et_pb_text_13_tb_footer","url":"https:\/\/carona.com.au\/product-range\/pvc\/","target":"_self"},{"class":"et_pb_text_14_tb_footer","url":"https:\/\/carona.com.au\/product\/impact-protection-and-door-support\/","target":"_self"},{"class":"et_pb_text_16_tb_footer","url":"https:\/\/carona.com.au\/installation-information\/","target":"_self"},{"class":"et_pb_text_17_tb_footer","url":"https:\/\/carona.com.au\/latest-catalogue\/","target":"_self"},{"class":"et_pb_text_19_tb_footer","url":"https:\/\/carona.com.au\/latest-catalogue\/","target":"_self"},{"class":"et_pb_text_20_tb_footer","url":"https:\/\/carona.com.au\/latest-catalogue\/","target":"_self"},{"class":"et_pb_text_21_tb_footer","url":"https:\/\/carona.com.au\/latest-catalogue\/","target":"_self"},{"class":"et_pb_text_22_tb_footer","url":"https:\/\/carona.com.au\/latest-catalogue\/","target":"_self"}];
+			</script>
+		<script type='text/javascript'>
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<link rel='stylesheet' id='wc-blocks-style-css' href='https://carona.com.au/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-9.6.0' type='text/css' media='all' />
+<link rel='stylesheet' id='rs-plugin-settings-css' href='https://carona.com.au/wp-content/plugins/revslider/public/assets/css/rs6.css?ver=6.5.12' type='text/css' media='all' />
+<style id='rs-plugin-settings-inline-css' type='text/css'>
+#rs-demo-id {}
+</style>
+<script type="text/javascript" src="https://carona.com.au/wp-content/plugins/yith-woocommerce-ajax-product-filter-premium/assets/js/ion.range-slider.min.js?ver=2.3.1" id="ion.range-slider-js"></script>
+<script type="text/javascript" src="https://carona.com.au/wp-content/plugins/woocommerce/assets/js/accounting/accounting.min.js?ver=0.4.2" id="accounting-js"></script>
+<script type="text/javascript" src="https://carona.com.au/wp-content/plugins/woocommerce/assets/js/selectWoo/selectWoo.full.min.js?ver=1.0.9-wc.9.6.0" id="selectWoo-js" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="yith-wcan-shortcodes-js-extra">
+/* <![CDATA[ */
+var yith_wcan_shortcodes = {"query_param":"yith_wcan","supported_taxonomies":["product_brand","product_cat","product_tag","pa_code","pa_description","pa_reference-no","pa_size","pa_spare-parts","part_type","type_product","category_type"],"content":"#content","change_browser_url":"1","instant_filters":"1","ajax_filters":"1","show_clear_filter":"","scroll_top":"","scroll_target":"","modal_on_mobile":"","session_param":"filter_session","show_current_children":"","loader":"","toggles_open_on_modal":"","mobile_media_query":"991","base_url":"https:\/\/carona.com.au\/","terms_per_page":"10","currency_format":{"symbol":"&#36;","decimal":".","thousand":",","precision":2,"format":"%s%v"},"labels":{"empty_option":"All","search_placeholder":"Search...","no_items":"No item found","show_more":"Show %d more","close":"Close","save":"Save","show_results":"Show results","clear_selection":"Clear","clear_all_selections":"Clear All"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://carona.com.au/wp-content/plugins/yith-woocommerce-ajax-product-filter-premium/assets/js/yith-wcan-shortcodes.min.js?ver=4.7.0" id="yith-wcan-shortcodes-js"></script>
+<script type="text/javascript" src="https://carona.com.au/wp-content/plugins/revslider/public/assets/js/rbtools.min.js?ver=6.5.12" defer async id="tp-tools-js"></script>
+<script type="text/javascript" src="https://carona.com.au/wp-content/plugins/revslider/public/assets/js/rs6.min.js?ver=6.5.12" defer async id="revmin-js"></script>
+<script type="text/javascript" src="https://carona.com.au/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-ecommerce-generic.js?ver=1.20.3" id="gtm4wp-ecommerce-generic-js"></script>
+<script type="text/javascript" src="https://carona.com.au/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-woocommerce.js?ver=1.20.3" id="gtm4wp-woocommerce-js"></script>
+<script type="text/javascript" id="divi-custom-script-js-extra">
+/* <![CDATA[ */
+var DIVI = {"item_count":"%d Item","items_count":"%d Items"};
+var et_builder_utils_params = {"condition":{"diviTheme":true,"extraTheme":false},"scrollLocations":["app","top"],"builderScrollLocations":{"desktop":"app","tablet":"app","phone":"app"},"onloadScrollLocation":"app","builderType":"fe"};
+var et_frontend_scripts = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
+var et_pb_custom = {"ajaxurl":"https:\/\/carona.com.au\/wp-admin\/admin-ajax.php","images_uri":"https:\/\/carona.com.au\/wp-content\/themes\/Divi\/images","builder_images_uri":"https:\/\/carona.com.au\/wp-content\/themes\/Divi\/includes\/builder\/images","et_frontend_nonce":"8e1d53b1af","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"64ef242898","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","wrong_checkbox":"Checkbox","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"7368","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"no","is_shortcode_tracking":"","tinymce_uri":"https:\/\/carona.com.au\/wp-content\/themes\/Divi\/includes\/builder\/frontend-builder\/assets\/vendors","accent_color":"#2ea3f2","waypoints_options":[]};
+var et_pb_box_shadow_elements = [];
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://carona.com.au/wp-content/themes/Divi/js/scripts.min.js?ver=4.27.4" id="divi-custom-script-js"></script>
+<script type="text/javascript" src="https://carona.com.au/wp-content/plugins/revslider/admin/includes/shortcode_generator/divi/scripts/frontend-bundle.min.js?ver=1.0.0" id="revslider-divi-frontend-bundle-js"></script>
+<script type="text/javascript" src="https://carona.com.au/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=9.6.0" id="sourcebuster-js-js"></script>
+<script type="text/javascript" id="wc-order-attribution-js-extra">
+/* <![CDATA[ */
+var wc_order_attribution = {"params":{"lifetime":1.0e-5,"session":30,"base64":false,"ajaxurl":"https:\/\/carona.com.au\/wp-admin\/admin-ajax.php","prefix":"wc_order_attribution_","allowTracking":true},"fields":{"source_type":"current.typ","referrer":"current_add.rf","utm_campaign":"current.cmp","utm_source":"current.src","utm_medium":"current.mdm","utm_content":"current.cnt","utm_id":"current.id","utm_term":"current.trm","utm_source_platform":"current.plt","utm_creative_format":"current.fmt","utm_marketing_tactic":"current.tct","session_entry":"current_add.ep","session_start_time":"current_add.fd","session_pages":"session.pgs","session_count":"udata.vst","user_agent":"udata.uag"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://carona.com.au/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=9.6.0" id="wc-order-attribution-js"></script>
+<script type="text/javascript" id="gforms_recaptcha_recaptcha-js-extra">
+/* <![CDATA[ */
+var gforms_recaptcha_recaptcha_strings = {"site_key":"6LfqDlQqAAAAAArG9fNhHUAbFqPHE-CHB4obyOgf","ajaxurl":"https:\/\/carona.com.au\/wp-admin\/admin-ajax.php","nonce":"ea20daf0d4"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?render=6LfqDlQqAAAAAArG9fNhHUAbFqPHE-CHB4obyOgf&amp;ver=1.6.0" id="gforms_recaptcha_recaptcha-js"></script>
+<script type="text/javascript" src="https://carona.com.au/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script type="text/javascript" src="https://carona.com.au/wp-includes/js/jquery/ui/mouse.min.js?ver=1.13.3" id="jquery-ui-mouse-js"></script>
+<script type="text/javascript" src="https://carona.com.au/wp-includes/js/jquery/ui/resizable.min.js?ver=1.13.3" id="jquery-ui-resizable-js"></script>
+<script type="text/javascript" src="https://carona.com.au/wp-includes/js/jquery/ui/draggable.min.js?ver=1.13.3" id="jquery-ui-draggable-js"></script>
+<script type="text/javascript" src="https://carona.com.au/wp-includes/js/jquery/ui/controlgroup.min.js?ver=1.13.3" id="jquery-ui-controlgroup-js"></script>
+<script type="text/javascript" src="https://carona.com.au/wp-includes/js/jquery/ui/checkboxradio.min.js?ver=1.13.3" id="jquery-ui-checkboxradio-js"></script>
+<script type="text/javascript" src="https://carona.com.au/wp-includes/js/jquery/ui/button.min.js?ver=1.13.3" id="jquery-ui-button-js"></script>
+<script type="text/javascript" src="https://carona.com.au/wp-includes/js/jquery/ui/dialog.min.js?ver=1.13.3" id="jquery-ui-dialog-js"></script>
+<script type="text/javascript" id="yith_ywraq_frontend-js-extra">
+/* <![CDATA[ */
+var ywraq_frontend = {"ajaxurl":"\/?wc-ajax=%%endpoint%%","current_lang":"","no_product_in_list":"<p class=\"ywraq_list_empty_message\">Your list is empty, add products to the list to send a request<p><p class=\"return-to-shop\"><a class=\"button wc-backward\" href=\"https:\/\/carona.com.au\/\">Return to Shop<\/a><\/p>","block_loader":"https:\/\/carona.com.au\/wp-content\/plugins\/yith-woocommerce-request-a-quote-premium\/assets\/images\/ajax-loader.gif","go_to_the_list":"no","rqa_url":"https:\/\/carona.com.au\/request-a-quote\/thank-you\/","current_user_id":"","hide_price":"0","allow_out_of_stock":"1","allow_only_on_out_of_stock":"","select_quantity":"Set at least the quantity for a product","i18n_choose_a_variation":"Please select some product options before adding this product to your quote list.","i18n_out_of_stock":"This Variation is Out of Stock, please select another one.","raq_table_refresh_check":"1","auto_update_cart_on_quantity_change":"1","enable_ajax_loading":"1","widget_classes":".widget_ywraq_list_quote, .widget_ywraq_mini_list_quote","show_form_with_empty_list":"1","mini_list_widget_popup":"1","isCheckout":"","showButtonOnCheckout":"1","buttonOnCheckoutStyle":"button","buttonOnCheckoutLabel":"Request a Quote"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://carona.com.au/wp-content/plugins/yith-woocommerce-request-a-quote-premium/assets/js/frontend.min.js?ver=4.30.0" id="yith_ywraq_frontend-js"></script>
+<script type="text/javascript" src="https://carona.com.au/wp-content/themes/Divi/core/admin/js/common.js?ver=4.27.4" id="et-core-common-js"></script>
+<script type="text/javascript" src="https://carona.com.au/wp-includes/js/hoverIntent.min.js?ver=1.10.2" id="hoverIntent-js"></script>
+<script type="text/javascript" src="https://carona.com.au/wp-content/plugins/megamenu/js/maxmegamenu.js?ver=3.4.1" id="megamenu-js"></script>
+<script type="text/javascript" src="https://carona.com.au/wp-content/plugins/supreme-modules-pro-for-divi/public/js/swiper-bundle.min.js?ver=4.9.97.26" id="dsm-swiper-js"></script>
+<script type="text/javascript" src="https://carona.com.au/wp-content/plugins/supreme-modules-pro-for-divi/includes/modules/BlogCarousel/frontend.min.js?ver=4.9.97.26" id="dsm-blog-carousel-js"></script>
+<script type="text/javascript" src="https://carona.com.au/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/jquery.fitvids.js?ver=4.27.4" id="fitvids-js"></script>
+	
+	</body>
+</html>
+
+
+<!-- Page cached by LiteSpeed Cache 6.5.4 on 2025-04-13 18:46:10 -->

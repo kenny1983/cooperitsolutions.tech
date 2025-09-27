@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Oswald:500" rel="stylesheet">
+	<style>
+		body {
+			background: #2a00ff;
+		}
+
+		h3 {
+			font-size: 3.69em;
+		}
+
+		h4 {
+			font-size: 1.77em;
+		}
+
+		h3, h4 {
+			color: white;
+			font-family: 'Oswald', sans-serif;
+			margin: 0 0 0 2px;
+			padding: 0;
+		}
+
+		#container {
+			left: calc(50% - 161px);
+			position: absolute;
+			top: calc(50% - 35px);
+		}
+
+		#container > div {
+			display: inline-block;
+			margin: 0 5px;
+			width: 90px;
+		}
+
+		#container > #tablet,
+		#container > #mobile {
+			width: 45px;
+		}
+
+		.screen {
+			background: white;
+			border: 5px solid white;
+			border-radius: 5px;
+			height: 45px;
+		}
+
+		#tablet .screen,
+		#mobile .screen {
+			height: 60px;
+		}
+
+		.screen:after {
+			background: #2a00ff;
+			border-radius: 5px;
+			content: "";
+			display: block;
+			height: 100%;
+			position: relative;
+			top: -30px;
+		}
+
+		#tablet .screen:after {
+			top: -50px;
+		}
+
+		#mobile .screen:after {
+			height: 55px;
+			top: -43px;
+		}
+
+		#stem {
+			background: white;
+			height: 15px;
+			margin-left: 5px;
+			width: calc(100% - 10px);
+		}
+
+		#stem:after,
+		#stem:before {
+			background: #2a00ff;
+			border-radius: 0 6px 6px 0;
+			content: "";
+			float: left;
+			height: 12px;
+			width: 45%;
+		}
+
+		#stem:after {
+			border-radius: 6px 0 0 6px;
+			float: right;
+		}
+
+		#keyboard {
+			background: white;
+			border-radius: 5px;
+			height: 10px;
+			margin-top: 5px;
+		}
+
+		.content-row {
+			height: 15px;
+			margin: 0 4px;
+			position: relative;
+			top: 3px;
+			z-index: 1;
+		}
+
+		.content-row:last-of-type {
+			top: 4px;
+		}
+
+		#tablet .content-row {
+			border-bottom: 2px solid white;
+			padding-bottom: 8px;
+			top: 2px;
+		}
+
+		#tablet .content-row:last-of-type {
+			top: 6px;
+		}
+
+		#mobile .content-row {
+			border-bottom: 2px solid white;
+			padding-bottom: 26px;
+			top: 5px;
+		}
+
+		.content-icon {
+			background: white;
+			float: left;
+			height: 15px;
+			margin: 2px 0;
+			width: 33%;
+		}
+
+		.content-text {
+			border-bottom: 2px solid white;
+			border-top: 2px solid white;
+			float: right;
+			height: 7px;
+			margin: 4px 0 4px 4px;
+			width: calc(67% - 4px);
+		}
+
+		#tablet .content-icon,
+		#tablet .content-text {
+			width: calc(50% - 2px);
+		}
+
+		#mobile .content-icon,
+		#mobile .content-text {
+			width: 100%;
+		}
+
+		#button {
+			background: #2a00ff;
+			border-radius: 3px;
+			bottom: 48px;
+			height: 6px;
+			position: absolute;
+			right: 24px;
+			width: 6px;
+		}
+	</style>
+</head>
+<body>
+<div id="container">
+	<h3>KENT COOPER</h3>
+	<div id="desktop">
+		<div class="screen">
+			<div class="content-row">
+				<div class="content-icon"></div>
+				<div class="content-text"></div>
+			</div>
+			<div class="content-row">
+				<div class="content-icon"></div>
+				<div class="content-text"></div>
+			</div>
+		</div>
+		<div id="stem"></div>
+	</div>
+	<div id="laptop">
+		<div class="screen">
+			<div class="content-row">
+				<div class="content-icon"></div>
+				<div class="content-text"></div>
+			</div>
+			<div class="content-row">
+				<div class="content-icon"></div>
+				<div class="content-text"></div>
+			</div>
+		</div>
+		<div id="keyboard"></div>
+	</div>
+	<div id="tablet">
+		<div class="screen">
+			<div class="content-row">
+				<div class="content-icon"></div>
+				<div class="content-text"></div>
+			</div>
+			<div class="content-row">
+				<div class="content-icon"></div>
+				<div class="content-text"></div>
+			</div>
+		</div>
+	</div>
+	<div id="mobile">
+		<div class="screen">
+			<div class="content-row">
+				<div class="content-icon"></div>
+				<div class="content-text"></div>
+			</div>
+		</div>
+		<div id="button"></div>
+	</div>
+	<h4>FULL STACK WEB DEVELOPER</h4>
+</div>
+</body>
+</html>
