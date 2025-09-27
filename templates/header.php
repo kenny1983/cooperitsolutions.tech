@@ -28,7 +28,7 @@
 						<li class="nav-item">
 							<a <?= $page !== $currPage ? '' : 'class="emphasis" ' ?>href="/<?= $page ?>.html">
 								<i class="fa fa-<?= $icon ?>"></i>
-								<span><?= ucwords($page) ?></span>
+								<span><?= ucwords($page !== 'index' ? $page : 'home') ?></span>
 							</a>
 						</li>
 					<?php } ?>
