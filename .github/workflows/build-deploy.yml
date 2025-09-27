@@ -65,9 +65,6 @@ jobs:
           name: pages-artifact
           path: dist
 
-      - name: List dist/ contents
-        run: ls -lhaR dist
-
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

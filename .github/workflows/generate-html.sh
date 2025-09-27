@@ -43,8 +43,6 @@ chmod 777 tmp
 touch build.lock # we are running the build process.
 trap "rm -rf build.lock" EXIT
 
-curl_and_save "/" "dist/index.html"
-
 # **/*.php (any PHP file) HTML Building
 find ./pages -name "*.php" ! -path "./system/*" ! -path "./vendor/*" ! -path "./layout/*" | while read -r file; do
     path="${file#./}" # Remove the leading ./
@@ -60,6 +58,9 @@ find ./pages -name "*.php" ! -path "./system/*" ! -path "./vendor/*" ! -path "./
     curl_and_save "/$path" "$htmlFile"
 done
 
+# Rename the home page's HTML file to index.html
+# so that it loads when visiting the site root
+mv dist/home.html dist/index.html
 #endregion
 
 #region Copying assets to dist
