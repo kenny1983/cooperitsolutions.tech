@@ -1,4 +1,4 @@
-name: Ata's SSG - Build and Deploy
+name: Generate and Deploy Static HTML
 
 on:
   schedule:
