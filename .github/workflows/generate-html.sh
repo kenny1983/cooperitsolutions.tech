@@ -20,7 +20,7 @@ fi
 # Curl the URL $1 and save it to $2
 function curl_and_save() {
     echo "curl_and_save https://localhost$1 > $2"
-    curl -ks --fail "https://localhost$1" >"$2"
+    curl -ks --fail "https://localhost$1" | sed 's/\.php"/.html"/g' > "$2"
 
     # Check if file exists
     if [[ ! -e "$2" ]]; then
