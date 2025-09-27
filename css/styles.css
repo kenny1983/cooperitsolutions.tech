@@ -82,12 +82,6 @@ i.fa-envelope-o:before {
 	z-index: 1;
 }
 
-@media (min-width: 768px) {
-	.fixed {
-		padding: 0 10%;
-	}
-}
-
 .titles {
 	text-transform: uppercase;
 	text-align: center;
@@ -107,20 +101,16 @@ body:not(#home-page) .titles {
 }
 
 :not(#home-page) .titles h2 {
-	font-size: 3em;
+	font-size: 2.75em;
 	font-weight: bold;
 }
 
 :not(#home-page) .titles h3 {
 	background-color: transparent;
 	display: block;
-	font-size: 2em;
+	font-size: 1.75em;
 	font-weight: bolder;
 	padding: 0;
-}
-
-.titles h1 {
-	font-size: 2.5em !important;
 }
 
 .titles *,
@@ -134,7 +124,6 @@ footer,
 	background-image: url("../images/greywash.png");
 	font-family: "Oswald", sans-serif;
 	font-weight: bold;
-	min-height: 140px;
 	padding: 80px 0 40px;
 	text-transform: uppercase;
 }
@@ -189,7 +178,7 @@ nav a:focus {
 	background-color: black;
 	color: #fff;
 	display: inline-block;
-	font-size: 1.2em;
+	font-size: 1em;
 	font-weight: normal;
 	margin-right: 5px;
 	padding: 0 12px;
@@ -249,7 +238,7 @@ nav h3:hover {
 }
 
 .content {
-	font-size: 0.75em;
+	font-size: 1.25rem;
 }
 
 @media (min-width: 768px) {
@@ -279,6 +268,10 @@ nav h3:hover {
 
 .sidebar {
 	padding: 20px 10% 35px 50px;
+}
+
+div:has(.polaroid):first-child {
+	margin-bottom: 50px;
 }
 
 .polaroid {
