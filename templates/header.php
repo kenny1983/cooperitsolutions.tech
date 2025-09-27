@@ -1,5 +1,5 @@
 <?php $pages = [
-	'home' => 'home',
+	'index' => 'home',
 	'about' => 'user',
 	'resume' => 'file-text',
 	'portfolio' => 'code',
@@ -26,7 +26,7 @@
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					<?php foreach ($pages as $page => $icon) { ?>
 						<li class="nav-item">
-							<a <?= $page !== $currPage ? '' : 'class="emphasis" ' ?>href="/pages/<?= $page ?>.php">
+							<a <?= $page !== $currPage ? '' : 'class="emphasis" ' ?>href="/<?= $page ?>.html">
 								<i class="fa fa-<?= $icon ?>"></i>
 								<span><?= ucwords($page) ?></span>
 							</a>

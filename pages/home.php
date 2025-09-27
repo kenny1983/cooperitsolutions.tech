@@ -1,5 +1,5 @@
 ﻿<?php $pageTitle = 'Home';
-$currPage = "home";
+$currPage = 'index';
 
 $sites = [
 	'carona' => 'https://www.carona.com.au/',
