@@ -45,10 +45,8 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress --no-dev
 
-      - name: Run Ata's SSG HTML Builder
-        uses: atas/actions/ssg-html-builder@main
-        with:
-          less_file_path: "assets/styles/style.less"
+      - name: Run HTML Builder
+        run: generate-html.sh
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
