@@ -28,7 +28,7 @@ function curl_and_save() {
         exit 1
     fi
 
-    # Check if file size is zero-length
+    # Check if file is zero-length
     if [[ ! -s "$2" ]]; then
         echo "Error: File '$2' is empty."
         exit 1
@@ -48,16 +48,16 @@ curl_and_save "/" "dist/index.html"
 # **/*.php Any php file dist Building
 find . -name "*.php" ! -path "./system/*" ! -path "./vendor/*" ! -path "./layout/*" | while read -r file; do
     file="${file#./}" #Remove the leading ./
-    without_extension="${file%.*}"
+    baseFile="${file%.*}"
 
     # Replace the .php extension with .html
-    dist_file="dist/${file%.php}.html"
+    htmlFile="dist/${file%.php}.html"
 
     # Create the directory structure if it doesn't exist
-    mkdir -p "$(dirname "$html_file")"
+    mkdir -p "$(dirname "$htmlFile")"
 
     filename=$(basename "$file" .php)
-    curl_and_save "/$without_extension" "$html_file"
+    curl_and_save "/$baseFile" "$htmlFile"
 done
 
 #endregion
