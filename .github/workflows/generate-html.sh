@@ -22,9 +22,6 @@ function curl_and_save() {
     phpFile=$(printf '%s\n' "$1" | sed 's/[.[\*^$(){}?+|/\\]/\\&/g')
     htmlFile=$(printf '%s\n' "$2" | sed 's/[.[\*^$(){}?+|/\\]/\\&/g')
 
-    echo "PHP file to convert is: $1"
-    echo "Escaped name of PHP file: $phpFile"
-
     echo "curl_and_save https://localhost$1 > $2"
     curl -ks --fail "https://localhost$1" | sed "s/$phpFile/$htmlFile/g" > "$2"
 
