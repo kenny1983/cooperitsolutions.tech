@@ -4,9 +4,9 @@
 	$titles = '<h2>Enter your details to <span class="emphasis">request a quote</span></h2>
 		<h3>Or even just to <span class="emphasis">say hello!</span> I promise I won\'t bite (very hard)</h3>';
 
-	require "../templates/head.php";
+	require __DIR__ . "../templates/head.php";
 	echo '<body id="contact-page">';
-	require "../templates/header.php";
+	require __DIR__ . "../templates/header.php";
 ?>
 	<div class="wave top"></div>
 	<div class="row">
@@ -73,7 +73,7 @@
 			</div>
 		</div>
 	</div>
-	<?php require "../templates/footer.php"; ?>
+	<?php require __DIR__ . "../templates/footer.php"; ?>
 	<script type="text/javascript">
 		var map = $('#map');
 		map.height(map.width() - 25);
