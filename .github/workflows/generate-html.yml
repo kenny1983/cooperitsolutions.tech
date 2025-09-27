@@ -1,0 +1,9 @@
+name: "PHP HTML Builder"
+description: "GitHub Action that builds HTML from PHP files in a repository based on github.com/atas/ssg"
+runs:
+  using: "composite"
+  steps:
+    - run: echo "$GITHUB_ACTION_PATH" >> $GITHUB_PATH
+      shell: bash
+    - run: generate-html.sh
+      shell: bash
