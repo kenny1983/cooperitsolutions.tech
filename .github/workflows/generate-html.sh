@@ -23,7 +23,7 @@ function curl_and_save() {
     htmlFile=$(printf '%s\n' "$2" | sed 's/[.[\*^$(){}?+|/\\]/\\&/g')
 
     echo "curl_and_save https://localhost$1 > $2"
-    curl -ks --fail "https://localhost$1" | sed "s/$phpFile/$htmlFile/g" > "$2"
+    curl -ksf "https://localhost$1" | sed "s/$phpFile/$htmlFile/g" > "$2"
 
     # Ensure file exists
     if [[ ! -e "$2" ]]; then
@@ -40,8 +40,7 @@ function curl_and_save() {
 
 #region Building HTML files
 rm -rf dist
-mkdir -p dist/sites
-chmod 777 tmp
+mkdir -p dist
 
 touch build.lock # we are running the build process.
 trap "rm -rf build.lock" EXIT
@@ -65,8 +64,8 @@ done
 # so that it loads when visiting the site root
 mv dist/home.html dist/index.html
 
-# Grab the HTML of each portfolio site and save
-# it as dist/sites/<portfolio site name>.html
+# Grab the HTML of each portfolio site using
+# a cURL call to /getPortfolioSite.php
 declare -A portfolioSites
 
 portfolioSites[carona]='https%3A%2F%2Fwww.carona.com.au'
@@ -78,7 +77,7 @@ portfolioSites[veridia]='https%3A%2F%2Fveridia.com.au'
 
 for siteName in "${!portfolioSites[@]}"; do
     siteUrl="${portfolioSites[$siteName]}"
-    curl_and_save "/getPortfolioSite.php?siteName=$siteName&siteUrl=$siteUrl" "dist/sites/$siteName.html"
+    curl -ksf "https://localhost/getPortfolioSite.php?siteName=$siteName&siteUrl=$siteUrl"
 done
 #endregion
 
