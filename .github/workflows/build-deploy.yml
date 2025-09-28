@@ -9,7 +9,7 @@ on:
     - cron: '0 * * * *'
 
 permissions:
-  contents: read
+  contents: write
   packages: read
   pages: write
   id-token: write
@@ -54,6 +54,15 @@ jobs:
         with:
           name: pages-artifact
           path: dist
+
+      - name: Commit HTML
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add dist
+          git commit -m "Update static HTML" || echo "No changes to commit"
+          git push
 
   prepare-pages:
     runs-on: ubuntu-latest

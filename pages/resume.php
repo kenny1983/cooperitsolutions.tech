@@ -3,7 +3,7 @@
 $pageTitle = "My Résumé";
 $currPage = "resume";
 $titles = '<h2>Check out my <span class="emphasis">impressive</span> résumé</h2>
-	<h3>I have been doing this stuff for almost <span class="emphasis">' . (getAge() - 14) . ' years!</span></h3>';
+	<h3>I have been doing this stuff for almost <span class="emphasis">' . (getAge() - 16) . ' years!</span></h3>';
 
 echo '<body id="resume-page">';
 require __DIR__ . '/../templates/header.php'; ?>

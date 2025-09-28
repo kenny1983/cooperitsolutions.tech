@@ -7,7 +7,7 @@ window.onload = () => {
 		{ siteUrl: 'https://www.tkv.com.au/', siteName: 'tkvgroup' },
 		{ siteUrl: 'https://veridia.com.au/', siteName: 'veridia' }
 	].forEach(site => {
-		$.get('/getPortfolioSite.php', site, () => {
+		$.get('/getPortfolioSite.html', site, () => {
 			const loader = $(`#home-carousel-${site.siteName}-loader`);
 			const carouselItem = loader.parent();
 			const iframe = document.createElement('iframe');
