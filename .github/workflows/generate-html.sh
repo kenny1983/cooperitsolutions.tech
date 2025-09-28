@@ -40,7 +40,7 @@ function curl_and_save() {
 
 #region Building HTML files
 rm -rf dist
-mkdir -p dist
+mkdir -p dist/sites
 chmod 777 tmp
 
 touch build.lock # we are running the build process.
@@ -69,12 +69,12 @@ mv dist/home.html dist/index.html
 # it as dist/sites/<portfolio site name>.html
 declare -A portfolioSites
 
-portfolioSites[carona]='https://www.carona.com.au'
-portfolioSites[enviroline]='https://enviroline.net.au'
-portfolioSites[magnattack]='https://www.magnattackglobal.com'
-portfolioSites[pneutech]='https://pneutech.com.au'
-portfolioSites[tkvgroup]='https://www.tkv.com.au/'
-portfolioSites[veridia]='https://veridia.com.au/'
+portfolioSites[carona]='https%3A%2F%2Fwww.carona.com.au'
+portfolioSites[enviroline]='https%3A%2F%2Fenviroline.net.au'
+portfolioSites[magnattack]='https%3A%2F%2Fwww.magnattackglobal.com'
+portfolioSites[pneutech]='https%3A%2F%2Fpneutech.com.au'
+portfolioSites[tkvgroup]='https%3A%2F%2Fwww.tkv.com.au'
+portfolioSites[veridia]='https%3A%2F%2Fveridia.com.au'
 
 for siteName in "${!portfolioSites[@]}"; do
     siteUrl="${portfolioSites[$siteName]}"
