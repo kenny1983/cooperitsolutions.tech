@@ -68,7 +68,7 @@ mv dist/home.html dist/index.html
 # a cURL call to /getPortfolioSite.php
 declare -A portfolioSites
 
-portfolioSites[carona]='https%3A%2F%2Fwww.carona.com.au'
+portfolioSites[carona]='https$3A%2F%2Fremaxdoors.com'
 portfolioSites[enviroline]='https%3A%2F%2Fenviroline.net.au'
 portfolioSites[magnattack]='https%3A%2F%2Fwww.magnattackglobal.com'
 portfolioSites[pneutech]='https%3A%2F%2Fpneutech.com.au'
