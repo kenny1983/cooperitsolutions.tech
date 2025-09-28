@@ -25,13 +25,13 @@ function curl_and_save() {
     echo "curl_and_save https://localhost$1 > $2"
     curl -ks --fail "https://localhost$1" | sed "s/$phpFile/$htmlFile/g" > "$2"
 
-    # Check if file exists
+    # Ensure file exists
     if [[ ! -e "$2" ]]; then
         echo "Error: File '$2' does not exist."
         exit 1
     fi
 
-    # Check if file is zero-length
+    # Ensure file is not zero-length
     if [[ ! -s "$2" ]]; then
         echo "Error: File '$2' is empty."
         exit 1
@@ -47,11 +47,11 @@ touch build.lock # we are running the build process.
 trap "rm -rf build.lock" EXIT
 
 # **/*.php (any PHP file) HTML Building
-find ./pages -name "*.php" ! -path "./system/*" ! -path "./vendor/*" ! -path "./layout/*" | while read -r file; do
+find ./pages -name "*.php" | while read -r file; do
     path="${file#./}" # Remove the leading ./
     file="$(basename "$path")"
 
-    # Replace the .php extension with .html
+    # Replace the .php extension with .html and prepend dist/
     htmlFile="dist/${file%.php}.html"
 
     # Create the directory structure if it doesn't exist
@@ -64,6 +64,22 @@ done
 # Rename the home page's HTML file to index.html
 # so that it loads when visiting the site root
 mv dist/home.html dist/index.html
+
+# Grab the HTML of each portfolio site and save
+# it as dist/sites/<portfolio site name>.html
+declare -A portfolioSites
+
+portfolioSites[carona]='https://www.carona.com.au'
+portfolioSites[enviroline]='https://enviroline.net.au'
+portfolioSites[magnattack]='https://www.magnattackglobal.com'
+portfolioSites[pneutech]='https://pneutech.com.au'
+portfolioSites[tkvgroup]='https://www.tkv.com.au/'
+portfolioSites[veridia]='https://veridia.com.au/'
+
+for siteName in "${!portfolioSites[@]}"; do
+    siteUrl="${portfolioSites[$siteName]}"
+    curl_and_save "/getPortfolioSite.php?siteName=$siteName&siteUrl=$siteUrl" "dist/sites/$siteName.html"
+done
 #endregion
 
 #region Copying assets to dist
@@ -71,4 +87,5 @@ cp -R css dist/css
 cp -R images dist/images
 cp -R js dist/js
 cp -R node_modules dist/node_modules
+cp -R sites dist/sites
 #endregion
