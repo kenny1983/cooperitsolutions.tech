@@ -2,7 +2,7 @@
 $siteUrl = $_GET['siteUrl'];
 
 // The path to save/load the site's HTML to/from
-$siteHtmlPath = __DIR__ . "/sites/$siteName.html";
+$siteHtmlPath = __DIR__ . "/dist/sites/$siteName.html";
 
 // Determine the age of the site's HTML file, if it exists.
 // If it doesn't, or if it's older than one week, we need
@@ -17,7 +17,14 @@ if ($lastModTime !== null && $lastModTime >= time() - $oneWeek) {
 
 // Get the site's home page's HTML source
 // and save it in "/sites/$siteName.html"
-$siteHtml = file_get_contents($siteUrl);
+$options = [
+    'http' => [
+        'header' => "User-Agent: Mozilla/5.0\r\n"
+    ]
+];
+$context = stream_context_create($options);
+$siteHtml = file_get_contents($siteUrl, false, $context);
+
 $siteHtmlDir = dirname($siteHtmlPath);
 
 if (!is_dir($siteHtmlDir)) {
