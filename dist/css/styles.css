@@ -1,0 +1,432 @@
+html {
+	height: 100%;
+}
+
+body {
+	background: url('/images/matrix.webp');
+	background-size: 25%;
+	color: white;
+	font-family: "Roboto", sans-serif;
+	height: 100%;
+}
+
+@media (min-width: 768px) {
+	body {
+		font-size: 2em !important;
+	}
+}
+
+a,
+a:hover,
+a:focus {
+	outline: 0;
+	color: inherit;
+}
+
+a span {
+	cursor: pointer;
+}
+
+i:not(.fa-home):not(.fa-file-text):not(.fa-chevron-right) {
+	position: relative;
+	top: -2px;
+}
+
+i.fa-file-text {
+	position: relative;
+	top: -4px;
+}
+
+i.fa-file:before {
+	font-size: 0.9em;
+}
+
+i.fa-home:before {
+	font-size: 1.2em;
+}
+
+i.fa-user:before,
+i.fa-code:before,
+i.fa-envelope-o:before {
+	font-size: 1.1em;
+}
+
+.centre {
+	height: 98px;
+	margin: -49px 0 0;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+}
+
+.centre a {
+	line-height: 98px !important;
+}
+
+.h-icon {
+	display: none;
+	margin: 0 auto;
+}
+
+.fixed {
+	align-items: center;
+	background-image: url("../images/greywash.png");
+	display: flex;
+	height: 140px;
+	justify-content: space-between;
+	left: 0;
+	padding: 0 20px;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 1;
+}
+
+.titles {
+	text-transform: uppercase;
+	text-align: center;
+}
+
+#home-page .titles {
+	font-family: "VT323", monospace;
+}
+
+body:not(#home-page) .row {
+	margin: 0;
+}
+
+body:not(#home-page) .titles {
+	color: black;
+	margin-top: 60px;
+}
+
+:not(#home-page) .titles h2 {
+	font-size: 2.75em;
+	font-weight: bold;
+}
+
+:not(#home-page) .titles h3 {
+	background-color: transparent;
+	display: block;
+	font-size: 1.75em;
+	font-weight: bolder;
+	padding: 0;
+}
+
+.titles *,
+header * {
+	margin: 0;
+}
+
+header,
+footer,
+.heading {
+	background-image: url("../images/greywash.png");
+	font-family: "Oswald", sans-serif;
+	font-weight: bold;
+	padding: 80px 0 40px;
+	text-transform: uppercase;
+}
+
+footer {
+	color: black;
+	height: 105px;
+	padding: 35px 0 20px 0;
+	text-align: center;
+}
+
+footer p {
+	display: inline-block;
+}
+
+#banner1 {
+	position: relative;
+	left: -17.5%;
+	top: -5px;
+}
+
+#banner2 {
+	position: relative;
+	right: -17.5%;
+	top: -5px;
+}
+
+.heading {
+	background-image: none;
+	display: inline-block;
+	margin: 0;
+	padding: 15px 0 30px;
+}
+
+.heading + section {
+	padding-left: 20px;
+}
+
+.navbar-brand h1,
+.navbar-brand h3 {
+	background-color: black;
+	padding: 3px 8px 5px;
+}
+
+.navbar-brand h1 {
+	display: inline-block;
+	margin-bottom: 2px;
+}
+
+nav a,
+nav a:focus {
+	background-color: black;
+	color: #fff;
+	display: inline-block;
+	font-size: 1em;
+	font-weight: normal;
+	margin-right: 5px;
+	padding: 0 12px;
+	text-decoration: none;
+}
+
+nav h1,
+nav h3 {
+	color: #fff;
+}
+
+.emphasis,
+nav a:hover,
+nav a.emphasis,
+nav h1:hover,
+nav h3:hover {
+    color: orangered !important;
+}
+
+.fixed :has(.emphasis):hover > .emphasis {
+	color: inherit;
+}
+
+.wave {
+	height: 15px;
+	position: relative;
+}
+
+.wave.bottom {
+	top: 15px;
+}
+
+.wave.top {
+	top: -15px;
+}
+
+.wave::after,
+.wave::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-repeat: repeat;
+}
+
+.wave::after {
+	height: 15px;
+	background-size: 40px 20px;
+	background-image: radial-gradient(circle at 10px 15px, black 12px, transparent 13px);
+}
+
+.wave::before {
+	height: 10px;
+	background-size: 20px 20px;
+	background-image: radial-gradient(circle at 10px -5px, transparent 12px, black 13px);
+}
+
+.content {
+	font-size: 1.25rem;
+}
+
+@media (min-width: 768px) {
+	.content {padding-left: 20px;width: 64%;}
+}
+
+#resume-page .content p,
+#resume-page .content li {
+	font-size: 1.1em;
+}
+
+.content [class^="col-md-"] {
+	padding: 0;
+}
+
+.content h4 {
+	font-family: "Oswald", sans-serif;
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: 20px 0;
+	text-transform: uppercase;
+}
+
+.content h4:first-child {
+	margin-top: 0;
+}
+
+.sidebar {
+	padding: 20px 10% 35px 50px;
+}
+
+div:has(.polaroid):first-child {
+	margin-bottom: 50px;
+}
+
+.polaroid {
+	position: relative;
+	width: 395px;
+}
+
+.polaroid:not(:first-child) {
+	margin-top: -430px;
+}
+
+.polaroid img {
+	border: 10px solid #fff;
+	border-bottom: 45px solid #fff;
+	-webkit-box-shadow: 3px 3px 3px #777;
+	-moz-box-shadow: 3px 3px 3px #777;
+	box-shadow: 3px 3px 3px #777;
+}
+
+.polaroid p {
+	bottom: -15px;
+	color: #888;
+	font-size: 0.9em;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+
+.rotate-5 {
+	-webkit-transform: rotate(5deg);
+	-moz-transform: rotate(5deg);
+	-o-transform: rotate(5deg);
+	-ms-transform: rotate(5deg);
+	transform: rotate(5deg);
+}
+
+.rotate-180 {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+.rotate-355 {
+	-webkit-transform: rotate(355deg);
+	-moz-transform: rotate(355deg);
+	-o-transform: rotate(355deg);
+	-ms-transform: rotate(355deg);
+	transform: rotate(355deg);
+}
+
+#contact-form {
+	margin-top: 18px;
+}
+
+.bottom-label {
+	margin-top: 5px
+}
+
+.bottom-label:not(.emphasis) {
+	display: block;
+	margin: -5px 0 10px;
+}
+
+.form-group.row [class^="col-md-"] {
+	padding: 0;
+}
+
+.col-form-label {
+	margin: 6px 0;
+}
+
+.btn-secondary {
+	background-color: white;
+	color: black;
+	padding: 6px;
+}
+
+#countries {
+	height: 195px;
+	margin: -2px 0 0 -1px;
+	overflow-y: scroll;
+}
+
+#countries a:hover {
+	background-color: blue;
+	color: white;
+}
+
+#loading {
+	display: none;
+	position: relative;
+	top: 6px;
+}
+
+textarea {
+	resize: none;
+}
+
+.home-frame-div {
+	position: relative;
+	width: 100%;
+	padding-bottom: 56.25%;
+	float: left;
+	height: 0;
+}
+
+.home-frame {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+}
+
+.home-loading {
+	display: inline-block;
+	margin: 20px 0;
+	text-align: center;
+	width: 100%;
+}
+
+.home-loading + p {
+	text-align: center;
+	width: 100%;
+}
+
+.fa-external-link {
+	font-size: 0.8em;
+}
+
+[id^="home-carousel-"] {
+	height: 100vh;
+	scale: 0.8;
+	width: 100vw;
+}
+
+div[id^="home-carousel-"] {
+	align-items: center;
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	scale: 1;
+}
+
+button[class^="carousel-control-"] {
+	width: 10%;
+}
+
+[class^="carousel-control-"] > span {
+	background-image: url('data:image/svg+xml,<svg height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 185.343 185.343" xml:space="preserve"><g><g><path style="fill:%23010002;" d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934c4.194,4.194,4.194,10.987,0,15.175l-81.934,81.939C57.201,184.293,54.454,185.343,51.707,185.343z"/></g></g></svg>');
+	filter: invert(100%);
+	scale: 2;
+}
+
+.carousel-control-prev-icon {
+	rotate: 180deg;
+}
