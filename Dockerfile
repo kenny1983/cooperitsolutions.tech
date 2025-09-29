@@ -71,7 +71,9 @@ RUN while IFS= read -r file || [ -n "$file" ]; do \
         echo "✅ Set assume-unchanged on $file"; \
     else \
         echo "⚠️ $file not tracked in git, skipping"; \
-    fi; done < .dockerignore && rm .dockerignore
+    fi; done < .dockerignore \
+    && rm .dockerignore \
+    && git update-index --assume-unchanged .dockerignore
 
 # Copy SSH keys to container (for connecting to GitHub), then ensure
 # that they have the correct perms and add GitHub to known hosts. This
