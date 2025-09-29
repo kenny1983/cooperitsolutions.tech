@@ -2,7 +2,7 @@
 $siteUrl = $_GET['siteUrl'];
 
 // The path to save/load the site's HTML to/from
-$siteHtmlPath = __DIR__ . "/dist/sites/$siteName.html";
+$siteHtmlPath = __DIR__ . "/sites/$siteName.html";
 
 // Determine the age of the site's HTML file, if it exists.
 // If it doesn't, or if it's older than one week, we need
