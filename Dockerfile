@@ -76,3 +76,15 @@ RUN while IFS= read -r file || [ -n "$file" ]; do \
 # Configure necessary locale-related settings
 ENV LANG=C.utf8
 ENV LC_ALL=C.utf8
+
+# Install and setup XDebug
+RUN pecl install xdebug \
+    && docker-php-ext-enable xdebug \
+    && { \
+        echo "zend_extension=/usr/local/lib/php/extensions/no-debug-non-zts-20240924/xdebug.so"; \
+        echo "xdebug.mode=debug"; \
+        echo "xdebug.start_with_request=yes"; \
+        echo "xdebug.client_host=host.docker.internal"; \
+        echo "xdebug.client_port=9003"; \
+        echo "xdebug.log_level=0"; \
+    } > /usr/local/etc/php/conf.d/xdebug.ini
