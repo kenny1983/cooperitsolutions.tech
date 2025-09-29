@@ -62,3 +62,6 @@ RUN apt-get update \
 # the files within from being accidentally removed from the repo
 RUN cat /var/www/html/.dockerignore >> /var/www/html/.git/info/exclude \
     && rm /var/www/html/.dockerignore
+
+# Bypass Git ownership security
+RUN git config --global --add safe.directory /var/www/html
