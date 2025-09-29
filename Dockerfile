@@ -1,7 +1,8 @@
 FROM php:8.4-apache
 
-# Copy project files
+# Copy project files and cd into web root
 COPY ./ /var/www/html/
+RUN cd /var/www/html/
 
 # Inline vhost conf with extensionless PHP URLs
 RUN cat <<'EOF' > /etc/apache2/sites-available/000-default.conf
@@ -48,8 +49,8 @@ RUN cat <<'EOF' > /etc/apache2/sites-available/000-default.conf
 EOF
 
 # Ensure Apache user can read project files
-RUN chown -R www-data:www-data /var/www/html \
-    && chmod -R a+rX /var/www/html \
+RUN chown -R www-data:www-data . \
+    && chmod -R a+rX . \
     && a2enmod rewrite
 
 # Install Git and clean up package lists
@@ -58,10 +59,20 @@ RUN apt-get update \
     && apt-get install -y git \
     && rm -rf /var/lib/apt/lists/*
 
-# Append our .dockerignore file on to .git/info/exclude, to prevent
-# the files within from being accidentally removed from the repo
-RUN cat /var/www/html/.dockerignore >> /var/www/html/.git/info/exclude \
-    && rm /var/www/html/.dockerignore
+# Bypass Git ownership security bullshit
+RUN git config --global --add safe.directory .
 
-# Bypass Git ownership security
-RUN git config --global --add safe.directory /var/www/html
+# Using our .dockerignore file, update the container's local
+# repo to ignore each entry. This should prevent them from
+# being removed from the remote repo accidentally
+RUN while IFS= read -r file || [ -n "$file" ]; do \
+    if git ls-files --error-unmatch "$file" > /dev/null 2>&1; then \
+        git update-index --assume-unchanged "$file" && \
+        echo "✅ Set assume-unchanged on $file"; \
+    else \
+        echo "⚠️ $file not tracked in git, skipping"; \
+    fi; done < .dockerignore && rm .dockerignore
+
+# Configure necessary locale-related settings
+ENV LANG=C.utf8
+ENV LC_ALL=C.utf8
