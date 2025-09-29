@@ -1,5 +1,5 @@
-.dockerignore
 .DS_Store
+.gitignore
 .vscode
 Dockerfile
 eslint.config.mjs

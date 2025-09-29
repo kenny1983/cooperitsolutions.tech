@@ -51,3 +51,14 @@ EOF
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R a+rX /var/www/html \
     && a2enmod rewrite
+
+# Install Git and clean up package lists
+# to keep the image as small as possible
+RUN apt-get update \
+    && apt-get install -y git \
+    && rm -rf /var/lib/apt/lists/*
+
+# Append our .dockerignore file on to .git/info/exclude, to prevent
+# the files within from being accidentally removed from the repo
+RUN cat /var/www/html/.dockerignore >> /var/www/html/.git/info/exclude \
+    && rm /var/www/html/.dockerignore
