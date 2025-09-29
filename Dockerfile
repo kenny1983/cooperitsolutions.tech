@@ -1,6 +1,6 @@
 FROM php:8.4-apache
 
-# Copy project files and cd into web root
+# Copy project files to container's web root and cd into it
 COPY ./ /var/www/html/
 RUN cd /var/www/html/
 
@@ -73,15 +73,26 @@ RUN while IFS= read -r file || [ -n "$file" ]; do \
         echo "⚠️ $file not tracked in git, skipping"; \
     fi; done < .dockerignore && rm .dockerignore
 
+# Copy SSH keys to container (for connecting to GitHub), then ensure
+# that they have the correct perms and add GitHub to known hosts. This
+# requires that the `--secret id=sshkey,src=$HOME/.ssh/id_rsa` option
+# be passed to the `podman build` command
+RUN --mount=type=secret,id=sshkey \
+    mkdir -p /root/.ssh \
+    && cp /run/secrets/sshkey /root/.ssh/id_rsa \
+    && chmod 600 /root/.ssh/id_rsa \
+    && ssh-keyscan github.com >> /root/.ssh/known_hosts
+
 # Configure necessary locale-related settings
 ENV LANG=C.utf8
 ENV LC_ALL=C.utf8
 
 # Install and setup XDebug
-RUN pecl install xdebug \
+RUN ext_dir="$(php -r 'echo ini_get("extension_dir");')" \
+    && pecl install xdebug \
     && docker-php-ext-enable xdebug \
     && { \
-        echo "zend_extension=/usr/local/lib/php/extensions/no-debug-non-zts-20240924/xdebug.so"; \
+        echo "zend_extension=$ext_dir/xdebug.so"; \
         echo "xdebug.mode=debug"; \
         echo "xdebug.start_with_request=yes"; \
         echo "xdebug.client_host=host.docker.internal"; \
