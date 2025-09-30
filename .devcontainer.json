@@ -1,0 +1,22 @@
+{
+	"name": "My Portfolio Website",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": ".",
+		"options": [
+			"-t",
+			"portfolio-website"
+		]
+	},
+	"forwardPorts": [ 80 ],
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"remote.extensionKind": {
+					"openai.codex": "ui"
+				}
+			}
+		}
+	},
+	"postStartCommand": "service apache2 start"
+}
