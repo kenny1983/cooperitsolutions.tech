@@ -21,13 +21,16 @@ RUN cat <<'EOF' > /etc/apache2/sites-available/000-default.conf
 		RewriteCond %{THE_REQUEST} \s/pages/([a-zA-Z0-9_-]+)\.php[\s?] [NC]
 		RewriteRule ^ /%1 [R=301,L]
 
+		# Prevent rewrite loops: skip root and index.php
+		RewriteCond %{REQUEST_URI} !^/(index\.php)?$
+
 		# Internal rewrite: map /<page name> → /pages/<page name>.php
 		RewriteCond %{DOCUMENT_ROOT}/pages/$1.php -f
 		RewriteRule ^([a-zA-Z0-9_-]+)$ /pages/$1.php [L]
 
 		# PHP overrides
 		<IfModule mod_php7.c>
-			php_value display_errors 1
+			php_flag display_errors off
 			php_value error_reporting E_ALL
 		</IfModule>
 	</Directory>
