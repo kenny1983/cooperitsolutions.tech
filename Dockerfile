@@ -90,11 +90,9 @@ ENV LANG=C.utf8
 ENV LC_ALL=C.utf8
 
 # Install and setup XDebug
-RUN ext_dir="$(php -r 'echo ini_get("extension_dir");')" \
-    && pecl install xdebug \
+RUN pecl install xdebug \
     && docker-php-ext-enable xdebug \
     && { \
-        echo "zend_extension=$ext_dir/xdebug.so"; \
         echo "xdebug.mode=debug"; \
         echo "xdebug.start_with_request=yes"; \
         echo "xdebug.client_host=host.docker.internal"; \
