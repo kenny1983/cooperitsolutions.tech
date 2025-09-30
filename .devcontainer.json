@@ -6,7 +6,10 @@
 		"options": [
 			"-t",
 			"portfolio-website"
-		]
+		],
+		"features": {
+			"ghcr.io/devcontainers/features/ssh-agent:1": {}
+		}
 	},
 	"forwardPorts": [ 80 ],
 	"customizations": {
