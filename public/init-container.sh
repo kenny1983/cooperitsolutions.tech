@@ -66,6 +66,7 @@ esac
 
 # Create ll alias for ls --color=auto -lha
 alias ll="ls --color=auto -lha"
+alias apacheload="service apache2 reload"
 
 # Start every terminal session in the web root
 cd /var/www/html
