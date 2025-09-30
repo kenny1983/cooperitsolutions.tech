@@ -44,6 +44,9 @@ RUN cat <<'EOF' > /etc/apache2/sites-available/000-default.conf
 </VirtualHost>
 EOF
 
+# Set Apache's ServerName so that it stops complaining about it!
+RUN echo 'ServerName dev.cooperitsolutions.tech' >> /etc/apache2/apache2.conf
+
 # Ensure that the Apache user can read project files
 RUN chown -R www-data:www-data . \
 	&& chmod -R a+rX . \
