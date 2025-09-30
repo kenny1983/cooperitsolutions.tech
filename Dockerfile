@@ -1,7 +1,6 @@
 FROM php:8.4-apache
 
-# Copy project files to container's web root and cd into it
-COPY ./ /var/www/html/
+# cd into the web root
 RUN cd /var/www/html/
 
 # Add an inline Apache vhost conf with extensionless PHP URLs
