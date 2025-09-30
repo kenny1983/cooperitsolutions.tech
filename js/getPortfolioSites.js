@@ -2,7 +2,7 @@
 // using Promises to properly handle errors
 window.onload = () => {
 	const sites = [
-		{ siteUrl: 'https://www.carona.com.au/', siteName: 'carona' },
+		{ siteUrl: 'https://www.remaxdoors.com.au/', siteName: 'remaxdoors' },
 		{ siteUrl: 'https://enviroline.net.au', siteName: 'enviroline' },
 		{ siteUrl: 'https://www.magnattackglobal.com', siteName: 'magnattack' },
 		{ siteUrl: 'https://pneutech.com.au', siteName: 'pneutech' },
