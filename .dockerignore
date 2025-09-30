@@ -7,5 +7,6 @@
 Dockerfile
 eslint.config.mjs
 jsconfig.json
+node_modules
 package.json
 package-lock.json
