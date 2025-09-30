@@ -11,6 +11,7 @@
 	"devDependencies": {
 		"@eslint/js": "^9.22.0",
 		"@stylistic/eslint-plugin": "^4.2.0",
+		"@types/es6-promise": "^0.0.33",
 		"@types/jquery": "^3.5.32",
 		"eslint": "^9.22.0",
 		"globals": "^16.0.0"
