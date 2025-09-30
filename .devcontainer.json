@@ -21,5 +21,11 @@
 			}
 		}
 	},
+<<<<<<< HEAD
 	"postStartCommand": "service apache2 start"
+=======
+	"forwardPorts": [
+		"8080:80"
+	]
+>>>>>>> 8aa90eea6ab8722a4229f34b28b93539aa97ce94
 }
