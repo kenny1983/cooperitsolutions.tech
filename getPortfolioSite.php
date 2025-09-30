@@ -43,6 +43,72 @@ if ($siteUrl && @filter_var($siteUrl, FILTER_VALIDATE_URL)) {
 	]));
 
 	if ($siteHtml !== false) {
+		// Proxy any internal resources hosted on the site through proxy.php
+		preg_match_all('/<\w+\s+[^>]*(src|href)="(.*?)"/i',
+			$siteHtml, $matches, PREG_SET_ORDER);
+
+		foreach ($matches as $match) {
+			$url = $match[2];
+
+			// Ignore absolute URLs pointing to external sites
+			$urlIsAbsolute = strpos($url, 'http') === 0;
+
+			if ($urlIsAbsolute && strpos($url, parse_url(
+				$siteUrl, PHP_URL_HOST)) === false) {
+				continue;
+			}
+
+			// Convert relative URLs to absolute
+			if (!$urlIsAbsolute) {
+				$url = rtrim($siteUrl, '/') . '/' . ltrim($url, '/');
+			}
+
+			// Determine file extension and local storage path
+			$ext = pathinfo(parse_url($url,
+				PHP_URL_PATH), PATHINFO_EXTENSION);
+			$ext = $ext ?: 'misc';
+
+			// Download the resource's content
+			$resourceContent = file_get_contents($url);
+
+			// If it's a CSS file, process URLs inside it
+			if ($ext === 'css') {
+				$resourceContent = preg_replace_callback('/url\(("|\')(.*)\1\)/',
+					function ($matches) use ($siteUrl, $siteName, $resourcePath) {
+						$path = $matches[2];
+
+						// Return the original url() function call if the
+						// path is an absolute URL or an SVG data URL
+						if (strpos($path, 'http') === 0 || strpos($path, 'data:image/svg')) {
+							return $matches[0];
+						}
+
+						$resourceUrl = rtrim($siteUrl, '/') . '/' . ltrim($path, '/');
+
+						$subExt = pathinfo(parse_url($resourceUrl,
+							PHP_URL_PATH), PATHINFO_EXTENSION);
+						$subExt = $subExt ?: 'misc';
+
+						// $subResourcePath = __DIR__ . "/sites/$siteName/$subExt";
+						// $subResourceName = basename(parse_url($resourceUrl, PHP_URL_PATH));
+						// $localSubResourcePath = "$subResourcePath/$subResourceName";
+
+						// if (!is_dir($subResourcePath)) {
+						// 	mkdir($subResourcePath, 0777, true);
+						// }
+
+						// $subResourceContent = file_get_contents($resourceUrl);
+						// file_put_contents($localSubResourcePath, $subResourceContent);
+
+						return "url('/sites/$siteName/$subExt/$subResourceName')";
+					}, $resourceContent);
+			}
+
+			// Replace the original resource reference with the new proxied URL
+			$siteHtml = str_replace($url, "/sites/$siteName/$ext/$resourceName", $siteHtml);
+		}
+
+		// Finally, save the resulting HTML in "/sites/$siteName.html"
 		$siteHtmlDir = dirname($siteHtmlPath);
 
 		if (!is_dir($siteHtmlDir)) {
