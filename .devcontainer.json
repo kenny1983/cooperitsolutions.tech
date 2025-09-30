@@ -1,0 +1,26 @@
+{
+	"name": "My Portfolio Website",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": ".",
+		"options": [
+			"--no-cache",
+			"--secret",
+			"id=sshkey,src=${localEnv:HOME}/.ssh/id_rsa",
+			"-t",
+			"portfolio-website"
+		]
+	},
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"remote.extensionKind": {
+					"openai.codex": "ui"
+				}
+			}
+		}
+	},
+	"forwardPorts": [
+		"8080:80"
+	]
+}
