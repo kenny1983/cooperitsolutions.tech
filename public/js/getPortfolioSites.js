@@ -2,12 +2,12 @@
 // using Promises to properly handle errors
 window.onload = () => {
 	const sites = [
-		{ siteUrl: 'https://www.remaxdoors.com.au/', siteName: 'remaxdoors' },
+		{ siteUrl: 'https://www.remaxdoors.com', siteName: 'remaxdoors' },
 		{ siteUrl: 'https://enviroline.net.au', siteName: 'enviroline' },
 		{ siteUrl: 'https://www.magnattackglobal.com', siteName: 'magnattack' },
 		{ siteUrl: 'https://pneutech.com.au', siteName: 'pneutech' },
-		{ siteUrl: 'https://www.tkv.com.au/', siteName: 'tkvgroup' },
-		{ siteUrl: 'https://veridia.com.au/', siteName: 'veridia' }
+		{ siteUrl: 'https://www.tkv.com.au', siteName: 'tkvgroup' },
+		{ siteUrl: 'https://veridia.com.au', siteName: 'veridia' }
 	];
 
 	async function loadSites() {
@@ -17,7 +17,7 @@ window.onload = () => {
 				// info and dynamically handle any PHP errors
 				const response = await new Promise((resolve, reject) => {
 					$.get('/getPortfolioSite.php', site, response => {
-						if (response && response.error) {
+						if (!response || response.error) {
 							reject(response);
 						} else {
 							resolve(response);
