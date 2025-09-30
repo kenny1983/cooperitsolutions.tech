@@ -17,6 +17,10 @@
 	],
 	"customizations": {
 		"vscode": {
+			"extensions": [
+				"openai.codex",
+				"xdebug.php-debug"
+			],
 			"settings": {
 				"remote.extensionKind": {
 					"openai.codex": "ui"
