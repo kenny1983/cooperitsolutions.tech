@@ -42,7 +42,7 @@ if ($siteUrl && @filter_var($siteUrl, FILTER_VALIDATE_URL)) {
 		]
 	]));
 
-	if ($siteHtml !== false) {
+ 	if ($siteHtml !== false) {
 		// Proxy any internal resources hosted on the site through proxy.php
 		preg_match_all('/<\w+\s+[^>]*(src|href)="(.*?)"/i',
 			$siteHtml, $matches, PREG_SET_ORDER);
