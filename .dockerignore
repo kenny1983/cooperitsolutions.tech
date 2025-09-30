@@ -1,5 +1,7 @@
 .devcontainer.json
+.dockerignore
 .DS_Store
+.git
 .gitignore
 .vscode
 Dockerfile
