@@ -2,7 +2,7 @@
 $currPage = 'index';
 
 $sites = [
-	'carona' => 'https://www.carona.com.au/',
+	'remaxdoors' => 'https://remaxdoors.com',
 	'enviroline' => '/sites/enviroline.html',
 	'magnattack' => '/sites/magnattack.html',
 	'pneutech' => '/sites/pneutech.html',
@@ -27,7 +27,7 @@ require __DIR__ . '/../templates/header.php'; ?>
 		</div>
 		<div class="carousel-inner">
 		<?php foreach ($sites as $siteName => $siteUrl) { ?>
-			<div class="carousel-item<?= $siteName !== 'carona' ? '' : ' active' ?>">
+			<div class="carousel-item<?= $siteName !== 'remaxdoors' ? '' : ' active' ?>">
 				<div id="<?= "home-carousel-$siteName-loader" ?>">
 					<i class="fa fa-spinner fa-spin"></i>
 					<span class="ms-3">Loading...</span>
