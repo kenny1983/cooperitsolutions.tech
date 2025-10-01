@@ -13,7 +13,8 @@
 	},
 	"forwardPorts": [ 8080 ],
 	"mounts": [
-		"source=${localWorkspaceFolder}/public,target=/var/www/html,type=bind,consistency=cached"
+		"source=${localWorkspaceFolder}/public,target=/var/www/html,type=bind,consistency=cached",
+		"source=${localWorkspaceFolder}/.container-history,target=/root/.bash_eternal_history,type=bind,consistency=cached"
 	],
 	"customizations": {
 		"vscode": {
